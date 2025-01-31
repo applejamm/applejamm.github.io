@@ -6,7 +6,7 @@
   <link href="https://applejamm.github.io/applejamm.github.io/atom.xml" rel="self"/>
   
   <link href="https://applejamm.github.io/applejamm.github.io/"/>
-  <updated>2024-06-27T16:19:55.131Z</updated>
+  <updated>2025-01-31T06:59:28.406Z</updated>
   <id>https://applejamm.github.io/applejamm.github.io/</id>
   
   <author>
@@ -15,6 +15,166 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>贝叶斯的对话</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/</id>
+    <published>2025-01-31T06:23:00.000Z</published>
+    <updated>2025-01-31T06:59:28.406Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;贝叶斯是谁？&quot;&gt;&lt;a href=&quot;#贝叶斯是谁？&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯是谁？&quot;&gt;&lt;/a&gt;贝叶斯是谁？&lt;/h2&gt;&lt;p&gt;AI：托马斯·贝叶斯（Thomas Bayes，1702-1761）是一位英国数学家、统计学家和长老会牧师，他提出的贝叶斯定理为概率论和统计学的发展做出了革命性的贡献。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;出生：1702年，伦敦&lt;/li&gt;
+&lt;li&gt;职业：神职人员和业余数学家&lt;/li&gt;
+&lt;li&gt;教育：爱丁堡大学&lt;/li&gt;
+&lt;li&gt;去世：1761年&lt;/li&gt;
+&lt;li&gt;特点：生前默默无闻，死后成名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;贝叶斯定理解释&quot;&gt;&lt;a href=&quot;#贝叶斯定理解释&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯定理解释&quot;&gt;&lt;/a&gt;贝叶斯定理解释&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;学习和练习（这部分为Claude）&quot;&gt;&lt;a href=&quot;#学习和练习（这部分为Claude）&quot; class=&quot;headerlink&quot; title=&quot;学习和练习（这部分为Claude）&quot;&gt;&lt;/a&gt;学习和练习（这部分为Claude）&lt;/h2&gt;&lt;p&gt; Prompt：向我提问，根据我的反馈进行判断并帮助我理解贝叶斯定理 。&lt;br&gt; Claude：好的，我会通过一系列浅显的问题，帮助你理解贝叶斯定理。让我们开始：&lt;/p&gt;
+&lt;h5 id=&quot;问题1：-假设你去医院做了一个疾病检测，医生说这个检测的准确率是95-，如果检测结果显示你患病了，你认为你真的患病的概率是95-吗？&quot;&gt;&lt;a href=&quot;#问题1：-假设你去医院做了一个疾病检测，医生说这个检测的准确率是95-，如果检测结果显示你患病了，你认为你真的患病的概率是95-吗？&quot; class=&quot;headerlink&quot; title=&quot;问题1：  假设你去医院做了一个疾病检测，医生说这个检测的准确率是95%，如果检测结果显示你患病了，你认为你真的患病的概率是95%吗？&quot;&gt;&lt;/a&gt;问题1：  假设你去医院做了一个疾病检测，医生说这个检测的准确率是95%，如果检测结果显示你患病了，你认为你真的患病的概率是95%吗？&lt;/h5&gt;&lt;p&gt;请回答：是&amp;#x2F;否，并说说你的想法。&lt;br&gt;（等待你的回答后，我会继续提供更多的信息和后续问题，帮助你理解贝叶斯定理的核心思想）&lt;/p&gt;
+&lt;h5 id=&quot;问题2：-让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0-1-（即1000人中只有1人患病）。&quot;&gt;&lt;a href=&quot;#问题2：-让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0-1-（即1000人中只有1人患病）。&quot; class=&quot;headerlink&quot; title=&quot;问题2：  让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0.1%（即1000人中只有1人患病）。&quot;&gt;&lt;/a&gt;问题2：  让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0.1%（即1000人中只有1人患病）。&lt;/h5&gt;&lt;p&gt;现在我们来做个小计算：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假设我们检测1000人&lt;/li&gt;
+&lt;li&gt;其中真正患病的是1人（因为发病率0.1%）&lt;/li&gt;
+&lt;li&gt;没病的是999人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于检测准确率95%：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;那1个病人有95%的概率被检出（≈1人）&lt;/li&gt;
+&lt;li&gt;999个健康人中有5%会被误判为患病（≈50人）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以，当一个人收到阳性结果时，你觉得他真实患病的概率大约是多少？&lt;br&gt;A. 95%&lt;br&gt;B. 50%&lt;br&gt;C. 2%&lt;br&gt;D. 20%&lt;/p&gt;
+&lt;p&gt;请选择一个答案，并说说你的想法。&lt;/p&gt;
+&lt;p&gt;这个问题将帮助你理解为什么在做概率判断时，我们需要考虑”先验概率”（即疾病的基础发病率）。&lt;/p&gt;
+&lt;h5 id=&quot;问题3：-现在我换一个场景：-假设你收到一封邮件，垃圾邮件过滤器显示它有90-的概率是垃圾邮件。但是你知道：&quot;&gt;&lt;a href=&quot;#问题3：-现在我换一个场景：-假设你收到一封邮件，垃圾邮件过滤器显示它有90-的概率是垃圾邮件。但是你知道：&quot; class=&quot;headerlink&quot; title=&quot;问题3：  现在我换一个场景：  假设你收到一封邮件，垃圾邮件过滤器显示它有90%的概率是垃圾邮件。但是你知道：&quot;&gt;&lt;/a&gt;问题3：  现在我换一个场景：  假设你收到一封邮件，垃圾邮件过滤器显示它有90%的概率是垃圾邮件。但是你知道：&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;这封邮件来自你经常联系的一个邮箱地址&lt;/li&gt;
+&lt;li&gt;一般来说，你收到的邮件中只有10%是垃圾邮件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基于这些信息，你会如何判断这封邮件是否为垃圾邮件？请考虑：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;过滤器的判断（90%）&lt;/li&gt;
+&lt;li&gt;发件人是熟人这个事实&lt;/li&gt;
+&lt;li&gt;你平时收到垃圾邮件的比例（10%）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个问题帮助你理解贝叶斯定理的三个关键要素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先验概率（你平时收到垃圾邮件的比例）&lt;/li&gt;
+&lt;li&gt;似然概率（过滤器的判断准确度）&lt;/li&gt;
+&lt;li&gt;后验概率（综合所有信息后的最终判断）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;请说说你的想法！&lt;/p&gt;
+&lt;h5 id=&quot;问题4：-现在假设你是一个医生，面对两种情况：&quot;&gt;&lt;a href=&quot;#问题4：-现在假设你是一个医生，面对两种情况：&quot; class=&quot;headerlink&quot; title=&quot;问题4：  现在假设你是一个医生，面对两种情况：&quot;&gt;&lt;/a&gt;问题4：  现在假设你是一个医生，面对两种情况：&lt;/h5&gt;&lt;p&gt;情况A：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个来自疫区的病人&lt;/li&gt;
+&lt;li&gt;出现了典型症状&lt;/li&gt;
+&lt;li&gt;快速检测呈阳性（准确率90%）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;情况B：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个无疫区接触史的病人&lt;/li&gt;
+&lt;li&gt;出现相似症状&lt;/li&gt;
+&lt;li&gt;同样的快速检测呈阳性（准确率90%）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;思考问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这两种情况下，患者真实患病的概率是一样的吗？&lt;/li&gt;
+&lt;li&gt;如果不一样，主要是因为什么因素造成的？&lt;/li&gt;
+&lt;li&gt;在医生做决策时，应该如何利用这些信息？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个问题帮助你理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相同的检测结果在不同背景下的含义可能不同&lt;/li&gt;
+&lt;li&gt;如何在实际决策中运用贝叶斯思维&lt;/li&gt;
+&lt;li&gt;为什么说贝叶斯定理是”科学决策的基石”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;问题5：-基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&quot;&gt;&lt;a href=&quot;#问题5：-基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&quot; class=&quot;headerlink&quot; title=&quot;问题5：  基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&quot;&gt;&lt;/a&gt;问题5：  基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&lt;/h5&gt;&lt;h5 id=&quot;问题6：-基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&quot;&gt;&lt;a href=&quot;#问题6：-基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&quot; class=&quot;headerlink&quot; title=&quot;问题6：  基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&quot;&gt;&lt;/a&gt;问题6：  基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&lt;/h5&gt;&lt;h2 id=&quot;感谢你的参与&quot;&gt;&lt;a href=&quot;#感谢你的参与&quot; class=&quot;headerlink&quot; title=&quot;感谢你的参与&quot;&gt;&lt;/a&gt;感谢你的参与&lt;/h2&gt;&lt;p&gt;通过这次讨论，我们一起探索了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;贝叶斯定理在医疗诊断中的应用&lt;/li&gt;
+&lt;li&gt;电商推荐系统的优化思路&lt;/li&gt;
+&lt;li&gt;实际应用中的关键考量点&lt;br&gt;这些概率思维的方法不仅能帮助我们做出更好的决策，也能帮助我们更理性地看待各种数据和现象。如果未来你在实践中遇到任何相关问题，随时欢迎继续讨论！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;问题4关键答案&quot;&gt;&lt;a href=&quot;#问题4关键答案&quot; class=&quot;headerlink&quot; title=&quot;问题4关键答案&quot;&gt;&lt;/a&gt;问题4关键答案&lt;/h2&gt;&lt;p&gt; 假设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检测准确率都是90%（真阳性率）&lt;/li&gt;
+&lt;li&gt;疫区人群的基础感染率是10%&lt;/li&gt;
+&lt;li&gt;非疫区人群的基础感染率是0.1%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分析结果：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;疫区患者（情况A）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先验概率高（10%）&lt;/li&gt;
+&lt;li&gt;检测呈阳性后，实际患病概率显著提升&lt;/li&gt;
+&lt;li&gt;医生需要更积极地进行治疗和隔离&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;非疫区患者（情况B）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先验概率低（0.1%）&lt;/li&gt;
+&lt;li&gt;即使检测呈阳性，实际患病概率仍然较低&lt;/li&gt;
+&lt;li&gt;医生可能需要进行二次检测或寻找其他证据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;问题6关键答案&quot;&gt;&lt;a href=&quot;#问题6关键答案&quot; class=&quot;headerlink&quot; title=&quot;问题6关键答案&quot;&gt;&lt;/a&gt;问题6关键答案&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;关于先验概率&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据规模问题：小样本vs大样本的可靠性&lt;/li&gt;
+&lt;li&gt;时效性问题：历史数据是否还具有现实参考价值&lt;/li&gt;
+&lt;li&gt;场景适应性：不同环境下先验概率的调整机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;关于统计结果的应用&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;成本收益分析：统计准确性和实施成本的平衡&lt;/li&gt;
+&lt;li&gt;风险评估：错误决策的代价考量&lt;/li&gt;
+&lt;li&gt;动态调整机制：如何根据新数据不断优化模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;系统复杂性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多因素交互：多个条件概率相互影响&lt;/li&gt;
+&lt;li&gt;数据偏差：如何处理采样偏差和测量误差&lt;/li&gt;
+&lt;li&gt;反馈循环：决策结果如何反过来影响先验概率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;附件&quot;&gt;&lt;a href=&quot;#附件&quot; class=&quot;headerlink&quot; title=&quot;附件&quot;&gt;&lt;/a&gt;附件&lt;/h2&gt;&lt;h5 id=&quot;贝叶斯公式&quot;&gt;&lt;a href=&quot;#贝叶斯公式&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯公式&quot;&gt;&lt;/a&gt;贝叶斯公式&lt;/h5&gt;&lt;p&gt;&lt;img src=&quot;/images/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F.png&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;以医学诊断为示例的代码&quot;&gt;&lt;a href=&quot;#以医学诊断为示例的代码&quot; class=&quot;headerlink&quot; title=&quot;以医学诊断为示例的代码&quot;&gt;&lt;/a&gt;以医学诊断为示例的代码&lt;/h5&gt;&lt;p&gt;&lt;code&gt;def bayes_medical_diagnosis(prevalence, sensitivity, specificity, test_positive):&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# prevalence: 疾病发生率（先验概率）&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# sensitivity: 灵敏度（真阳性率）&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# specificity: 特异度（真阴性率）&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# test_positive: 检测呈阳性的概率&lt;/code&gt;  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;posterior = (sensitivity * prevalence) / ( 
+    sensitivity * prevalence + 
+    (1 - specificity) * (1 - prevalence)  
+)
+return posterior
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;本文使用的AI包括&quot;&gt;&lt;a href=&quot;#本文使用的AI包括&quot; class=&quot;headerlink&quot; title=&quot;本文使用的AI包括&quot;&gt;&lt;/a&gt;本文使用的AI包括&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;对话页面：Sider浏览器插件&lt;/li&gt;
+&lt;li&gt;教学AI：Claude 3.5 Haiku&lt;/li&gt;
+&lt;li&gt;公式图生成：DeepSeek</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://applejamm.github.io/applejamm.github.io/categories/AI/"/>
+    
+    
+    <category term="产品经理" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+    
+    <category term="AI" scheme="https://applejamm.github.io/applejamm.github.io/tags/AI/"/>
+    
+    <category term="贝叶斯定理" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/"/>
+    
+    <category term="prompt" scheme="https://applejamm.github.io/applejamm.github.io/tags/prompt/"/>
+    
+  </entry>
   
   <entry>
     <title>项目经理竟然说不怕延期，你们停下来修bug吧</title>
