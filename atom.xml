@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>苹果圈圈</title>
+  
+  <subtitle>创新、产品研发、冥想。。。</subtitle>
+  <link href="https://applejamm.github.io/applejamm.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://applejamm.github.io/applejamm.github.io/"/>
+  <updated>2026-02-09T09:47:29.861Z</updated>
+  <id>https://applejamm.github.io/applejamm.github.io/</id>
+  
+  <author>
+    <name>马菲菲</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>当 AI 答得「对」却不够准——信息闭环里产品能做什么</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2025/02/09/%E5%BD%93%20AI%20%E7%AD%94%E5%BE%97%E3%80%8C%E5%AF%B9%E3%80%8D%E5%8D%B4%E4%B8%8D%E5%A4%9F%E5%87%86%E2%80%94%E2%80%94%E4%BF%A1%E6%81%AF%E9%97%AD%E7%8E%AF%E9%87%8C%E4%BA%A7%E5%93%81%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2025/02/09/%E5%BD%93%20AI%20%E7%AD%94%E5%BE%97%E3%80%8C%E5%AF%B9%E3%80%8D%E5%8D%B4%E4%B8%8D%E5%A4%9F%E5%87%86%E2%80%94%E2%80%94%E4%BF%A1%E6%81%AF%E9%97%AD%E7%8E%AF%E9%87%8C%E4%BA%A7%E5%93%81%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88/</id>
+    <published>2025-02-09T04:00:00.000Z</published>
+    <updated>2026-02-09T09:47:29.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;当-AI-答得「对」却不够准——信息闭环里产品能做什么&quot;&gt;&lt;a href=&quot;#当-AI-答得「对」却不够准——信息闭环里产品能做什么&quot; class=&quot;headerlink&quot; title=&quot;当 AI 答得「对」却不够准——信息闭环里产品能做什么&quot;&gt;&lt;/a&gt;当 AI 答得「对」却不够准——信息闭环里产品能做什么&lt;/h1&gt;&lt;p&gt;用户问了一个问题，AI 给了答案。答案没有明显错误，但总差那么一点：要么不够贴题，要么不是「你最想给用户的那一个」。这种体验，很多接入了知识库或 RAG 的产品都遇到过。问题往往不在模型「会不会说」，而在&lt;strong&gt;信息从进到出的整条链路上，哪一环节松了&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;不准，是人没说清还是信息太杂？&quot;&gt;&lt;a href=&quot;#不准，是人没说清还是信息太杂？&quot; class=&quot;headerlink&quot; title=&quot;不准，是人没说清还是信息太杂？&quot;&gt;&lt;/a&gt;不准，是人没说清还是信息太杂？&lt;/h2&gt;&lt;p&gt;一类是&lt;strong&gt;人这边没说清楚&lt;/strong&gt;。用户自己也没法完整描述问题：话太模糊、太口语，或者一次问了多个意思。系统在海量信息里捞针，自然容易偏。&lt;/p&gt;
+&lt;p&gt;另一类是&lt;strong&gt;信息这边太杂&lt;/strong&gt;。知识库越丰富，和问题「沾边」的内容就越多。系统确实「搜到了」，但把次要的当成了主要的，或者把过时的、不适用当前场景的当成了标准答案——也就是常说的「搜到了但选错了」。&lt;/p&gt;
+&lt;p&gt;两类原因常常一起出现：需求不清晰，选项又太多，结果就容易跑偏。我们后来发现，很多「不准」其实都能在这条「人 → AI → 信息 → AI → 人」的闭环里对号入座——哪一环松了，就从哪一环收紧。&lt;/p&gt;
+&lt;p&gt;再往大一点说，但凡「结果不对」，是不是往往可以先问一句：链路里哪一环松了？这种「先有闭环、再找环节」的想法的确可以迁移：转化率掉、推荐不准、客服答非所问，都可以先画出「从用户到结果」的整条链，再对号入座。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;不是信息不够，而是从「相关」到「贴题」的那一跳没做好&quot;&gt;&lt;a href=&quot;#不是信息不够，而是从「相关」到「贴题」的那一跳没做好&quot; class=&quot;headerlink&quot; title=&quot;不是信息不够，而是从「相关」到「贴题」的那一跳没做好&quot;&gt;&lt;/a&gt;不是信息不够，而是从「相关」到「贴题」的那一跳没做好&lt;/h2&gt;&lt;p&gt;在企业或知识库场景里，这一点尤其明显。文档多、版本多、部门多，用户一句「这个功能怎么配」可能对应十几份文档。系统若只做「语义相似」的粗筛，很容易推出一堆「都相关、但都不是当前场景最该看的那一条」。用户拿到的是「没错但不好用」的答案，信任就会打折扣。&lt;/p&gt;
+&lt;p&gt;换句话说：&lt;strong&gt;不是信息不够，而是从「相关」到「贴题」的那一跳没做好&lt;/strong&gt;。就像管理员带你到了对的书架，但没帮你从几百本书里翻出最该看的那几页。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;谁在排序，谁就握住了「准」的开关&quot;&gt;&lt;a href=&quot;#谁在排序，谁就握住了「准」的开关&quot; class=&quot;headerlink&quot; title=&quot;谁在排序，谁就握住了「准」的开关&quot;&gt;&lt;/a&gt;谁在排序，谁就握住了「准」的开关&lt;/h2&gt;&lt;p&gt;想象一个 IM 产品接了附近几家咖啡店，用户说「想喝杯拿铁」。系统能理解意图，也能查出这几家店都有拿铁。但若不做任何干预，每次都可能按「距离最近」或「语义最像」把同一家店排在前面。而你作为产品或运营，可能希望在一定时期内，把订单比例往某几家店倾斜——例如新品推广、产能平衡。&lt;/p&gt;
+&lt;p&gt;这时，真正的瓶颈往往不在「有没有搜到店」，而在&lt;strong&gt;搜到之后，按什么规则决定「先给用户看哪一家」&lt;/strong&gt;。谁在排序、谁在「净化」候选结果，谁就握住了「准」的开关。在信息闭环里，对应的是同一类问题：&lt;strong&gt;理解意图之后，还要有一层「选对、选准」的机制&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;排序权其实就是「准」的控制点。我们试过在数据里硬改、在最后一句回复里硬掰，效果都不如在「排序与净化」这一层设控制点来得自然、也好迭代。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;别让「第一次粗排」的结果直接等于最终答案&quot;&gt;&lt;a href=&quot;#别让「第一次粗排」的结果直接等于最终答案&quot; class=&quot;headerlink&quot; title=&quot;别让「第一次粗排」的结果直接等于最终答案&quot;&gt;&lt;/a&gt;别让「第一次粗排」的结果直接等于最终答案&lt;/h2&gt;&lt;p&gt;我们自己的习惯是，先不纠结技术栈，从两件事看起。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一是把「理解人」做实一点。&lt;/strong&gt; 用户的一句话，能不能被拆成更清晰、更贴近知识库表达方式的多个角度？能不能区分他是要「排障步骤」还是「原理解释」？意图清晰一分，后面检索和筛选的压力就小一分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二是在「选结果」这一环加一道闸。&lt;/strong&gt; 粗筛可以多召回一些候选，但最终呈现在用户面前的，多半会多经过一次「谁更贴题、谁更符合当前业务目标」的再筛选。规则权重、人工抽样、或更智能的排序模型，本质都是在做同一件事：&lt;strong&gt;别让「第一次粗排」的结果直接等于最终答案&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;传统搜索和 AI 检索在这点上是一致的：都要做排序和权重控制。区别在于，传统搜索靠关键词和统计权重，AI 检索多了语义这一维；但若业务上需要「把某类结果多推一点、某类少推一点」，两种技术栈最后都会落到「在排序层加业务规则」——在合适的那一层做干预，比在数据层硬改或输出层硬掰，要自然得多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;当前不准，到底是「没搜到」还是「搜到了但选错了」？&quot;&gt;&lt;a href=&quot;#当前不准，到底是「没搜到」还是「搜到了但选错了」？&quot; class=&quot;headerlink&quot; title=&quot;当前不准，到底是「没搜到」还是「搜到了但选错了」？&quot;&gt;&lt;/a&gt;当前不准，到底是「没搜到」还是「搜到了但选错了」？&lt;/h2&gt;&lt;p&gt;AI 能答了，用户自然会对「准」和「贴题」期待更高。我自己会先问一句：&lt;strong&gt;当前不准，到底是「没搜到」还是「搜到了但选错了」？&lt;/strong&gt; 前者会推着你去动检索与意图理解，后者会推着你去补「排序与净化」这一层。&lt;/p&gt;
+&lt;p&gt;在这条闭环上画出模块——哪里在理解人、哪里在捞信息、哪里在决定「最后给用户看什么」——找到真正失灵的那一环，再考虑用哪些手段（规则、权重、反馈、或更智能的排序）把这一环拧紧。我们自己的体会是：问题比技术更能牵引方向。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;一个可内化的解题框架：界定-→-拆解-→-定位-→-干预&quot;&gt;&lt;a href=&quot;#一个可内化的解题框架：界定-→-拆解-→-定位-→-干预&quot; class=&quot;headerlink&quot; title=&quot;一个可内化的解题框架：界定 → 拆解 → 定位 → 干预&quot;&gt;&lt;/a&gt;一个可内化的解题框架：界定 → 拆解 → 定位 → 干预&lt;/h2&gt;&lt;p&gt;上面说的「画闭环、找环节、对症拧紧」，和咨询里解复杂问题时常用的拆法很像，我习惯这样想：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;界定现象&lt;/strong&gt;——不准，具体是哪种？（没搜到 &amp;#x2F; 搜到但选错了 &amp;#x2F; 选对但说歪了）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拆解链路&lt;/strong&gt;——画出「人 → AI → 信息 → AI →</summary>
+        
+      
+    
+    
+    
+    <category term="未分类" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="未分类" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>贝叶斯的对话</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/</id>
+    <published>2025-01-31T06:23:00.000Z</published>
+    <updated>2025-01-31T07:00:37.800Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;贝叶斯是谁？&quot;&gt;&lt;a href=&quot;#贝叶斯是谁？&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯是谁？&quot;&gt;&lt;/a&gt;贝叶斯是谁？&lt;/h2&gt;&lt;p&gt;AI：托马斯·贝叶斯（Thomas Bayes，1702-1761）是一位英国数学家、统计学家和长老会牧师，他提出的贝叶斯定理为概率论和统计学的发展做出了革命性的贡献。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;出生：1702年，伦敦&lt;/li&gt;
+&lt;li&gt;职业：神职人员和业余数学家&lt;/li&gt;
+&lt;li&gt;教育：爱丁堡大学&lt;/li&gt;
+&lt;li&gt;去世：1761年&lt;/li&gt;
+&lt;li&gt;特点：生前默默无闻，死后成名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;贝叶斯定理解释&quot;&gt;&lt;a href=&quot;#贝叶斯定理解释&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯定理解释&quot;&gt;&lt;/a&gt;贝叶斯定理解释&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;学习和练习（这部分为Claude）&quot;&gt;&lt;a href=&quot;#学习和练习（这部分为Claude）&quot; class=&quot;headerlink&quot; title=&quot;学习和练习（这部分为Claude）&quot;&gt;&lt;/a&gt;学习和练习（这部分为Claude）&lt;/h2&gt;&lt;p&gt; Prompt：向我提问，根据我的反馈进行判断并帮助我理解贝叶斯定理 。&lt;br&gt; Claude：好的，我会通过一系列浅显的问题，帮助你理解贝叶斯定理。让我们开始：&lt;/p&gt;
+&lt;h5 id=&quot;问题1：-假设你去医院做了一个疾病检测，医生说这个检测的准确率是95-，如果检测结果显示你患病了，你认为你真的患病的概率是95-吗？&quot;&gt;&lt;a href=&quot;#问题1：-假设你去医院做了一个疾病检测，医生说这个检测的准确率是95-，如果检测结果显示你患病了，你认为你真的患病的概率是95-吗？&quot; class=&quot;headerlink&quot; title=&quot;问题1：  假设你去医院做了一个疾病检测，医生说这个检测的准确率是95%，如果检测结果显示你患病了，你认为你真的患病的概率是95%吗？&quot;&gt;&lt;/a&gt;问题1：  假设你去医院做了一个疾病检测，医生说这个检测的准确率是95%，如果检测结果显示你患病了，你认为你真的患病的概率是95%吗？&lt;/h5&gt;&lt;p&gt;请回答：是&amp;#x2F;否，并说说你的想法。&lt;br&gt;（等待你的回答后，我会继续提供更多的信息和后续问题，帮助你理解贝叶斯定理的核心思想）&lt;/p&gt;
+&lt;h5 id=&quot;问题2：-让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0-1-（即1000人中只有1人患病）。&quot;&gt;&lt;a href=&quot;#问题2：-让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0-1-（即1000人中只有1人患病）。&quot; class=&quot;headerlink&quot; title=&quot;问题2：  让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0.1%（即1000人中只有1人患病）。&quot;&gt;&lt;/a&gt;问题2：  让我加入一个重要信息：假设这个疾病在整个人群中的发病率只有0.1%（即1000人中只有1人患病）。&lt;/h5&gt;&lt;p&gt;现在我们来做个小计算：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假设我们检测1000人&lt;/li&gt;
+&lt;li&gt;其中真正患病的是1人（因为发病率0.1%）&lt;/li&gt;
+&lt;li&gt;没病的是999人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于检测准确率95%：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;那1个病人有95%的概率被检出（≈1人）&lt;/li&gt;
+&lt;li&gt;999个健康人中有5%会被误判为患病（≈50人）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以，当一个人收到阳性结果时，你觉得他真实患病的概率大约是多少？&lt;br&gt;A. 95%&lt;br&gt;B. 50%&lt;br&gt;C. 2%&lt;br&gt;D. 20%&lt;/p&gt;
+&lt;p&gt;请选择一个答案，并说说你的想法。&lt;/p&gt;
+&lt;p&gt;这个问题将帮助你理解为什么在做概率判断时，我们需要考虑”先验概率”（即疾病的基础发病率）。&lt;/p&gt;
+&lt;h5 id=&quot;问题3：-现在我换一个场景：-假设你收到一封邮件，垃圾邮件过滤器显示它有90-的概率是垃圾邮件。但是你知道：&quot;&gt;&lt;a href=&quot;#问题3：-现在我换一个场景：-假设你收到一封邮件，垃圾邮件过滤器显示它有90-的概率是垃圾邮件。但是你知道：&quot; class=&quot;headerlink&quot; title=&quot;问题3：  现在我换一个场景：  假设你收到一封邮件，垃圾邮件过滤器显示它有90%的概率是垃圾邮件。但是你知道：&quot;&gt;&lt;/a&gt;问题3：  现在我换一个场景：  假设你收到一封邮件，垃圾邮件过滤器显示它有90%的概率是垃圾邮件。但是你知道：&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;这封邮件来自你经常联系的一个邮箱地址&lt;/li&gt;
+&lt;li&gt;一般来说，你收到的邮件中只有10%是垃圾邮件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基于这些信息，你会如何判断这封邮件是否为垃圾邮件？请考虑：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;过滤器的判断（90%）&lt;/li&gt;
+&lt;li&gt;发件人是熟人这个事实&lt;/li&gt;
+&lt;li&gt;你平时收到垃圾邮件的比例（10%）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个问题帮助你理解贝叶斯定理的三个关键要素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先验概率（你平时收到垃圾邮件的比例）&lt;/li&gt;
+&lt;li&gt;似然概率（过滤器的判断准确度）&lt;/li&gt;
+&lt;li&gt;后验概率（综合所有信息后的最终判断）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;请说说你的想法！&lt;/p&gt;
+&lt;h5 id=&quot;问题4：-现在假设你是一个医生，面对两种情况：&quot;&gt;&lt;a href=&quot;#问题4：-现在假设你是一个医生，面对两种情况：&quot; class=&quot;headerlink&quot; title=&quot;问题4：  现在假设你是一个医生，面对两种情况：&quot;&gt;&lt;/a&gt;问题4：  现在假设你是一个医生，面对两种情况：&lt;/h5&gt;&lt;p&gt;情况A：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个来自疫区的病人&lt;/li&gt;
+&lt;li&gt;出现了典型症状&lt;/li&gt;
+&lt;li&gt;快速检测呈阳性（准确率90%）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;情况B：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个无疫区接触史的病人&lt;/li&gt;
+&lt;li&gt;出现相似症状&lt;/li&gt;
+&lt;li&gt;同样的快速检测呈阳性（准确率90%）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;思考问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这两种情况下，患者真实患病的概率是一样的吗？&lt;/li&gt;
+&lt;li&gt;如果不一样，主要是因为什么因素造成的？&lt;/li&gt;
+&lt;li&gt;在医生做决策时，应该如何利用这些信息？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个问题帮助你理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相同的检测结果在不同背景下的含义可能不同&lt;/li&gt;
+&lt;li&gt;如何在实际决策中运用贝叶斯思维&lt;/li&gt;
+&lt;li&gt;为什么说贝叶斯定理是”科学决策的基石”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&quot;问题5：-基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&quot;&gt;&lt;a href=&quot;#问题5：-基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&quot; class=&quot;headerlink&quot; title=&quot;问题5：  基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&quot;&gt;&lt;/a&gt;问题5：  基于这个例子，你能想到在其他领域（比如法律、教育、商业等）中，哪些情况也需要类似的贝叶斯思维？请举一个例子。&lt;/h5&gt;&lt;h5 id=&quot;问题6：-基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&quot;&gt;&lt;a href=&quot;#问题6：-基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&quot; class=&quot;headerlink&quot; title=&quot;问题6：  基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&quot;&gt;&lt;/a&gt;问题6：  基于这个例子，你认为在实际应用贝叶斯定理时，最关键的挑战是什么？需要注意什么？&lt;/h5&gt;&lt;h2 id=&quot;感谢你的参与&quot;&gt;&lt;a href=&quot;#感谢你的参与&quot; class=&quot;headerlink&quot; title=&quot;感谢你的参与&quot;&gt;&lt;/a&gt;感谢你的参与&lt;/h2&gt;&lt;p&gt;通过这次讨论，我们一起探索了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;贝叶斯定理在医疗诊断中的应用&lt;/li&gt;
+&lt;li&gt;电商推荐系统的优化思路&lt;/li&gt;
+&lt;li&gt;实际应用中的关键考量点&lt;br&gt;这些概率思维的方法不仅能帮助我们做出更好的决策，也能帮助我们更理性地看待各种数据和现象。如果未来你在实践中遇到任何相关问题，随时欢迎继续讨论！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;问题4关键答案&quot;&gt;&lt;a href=&quot;#问题4关键答案&quot; class=&quot;headerlink&quot; title=&quot;问题4关键答案&quot;&gt;&lt;/a&gt;问题4关键答案&lt;/h2&gt;&lt;p&gt; 假设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检测准确率都是90%（真阳性率）&lt;/li&gt;
+&lt;li&gt;疫区人群的基础感染率是10%&lt;/li&gt;
+&lt;li&gt;非疫区人群的基础感染率是0.1%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分析结果：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;疫区患者（情况A）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先验概率高（10%）&lt;/li&gt;
+&lt;li&gt;检测呈阳性后，实际患病概率显著提升&lt;/li&gt;
+&lt;li&gt;医生需要更积极地进行治疗和隔离&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;非疫区患者（情况B）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先验概率低（0.1%）&lt;/li&gt;
+&lt;li&gt;即使检测呈阳性，实际患病概率仍然较低&lt;/li&gt;
+&lt;li&gt;医生可能需要进行二次检测或寻找其他证据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;问题6关键答案&quot;&gt;&lt;a href=&quot;#问题6关键答案&quot; class=&quot;headerlink&quot; title=&quot;问题6关键答案&quot;&gt;&lt;/a&gt;问题6关键答案&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;关于先验概率&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据规模问题：小样本vs大样本的可靠性&lt;/li&gt;
+&lt;li&gt;时效性问题：历史数据是否还具有现实参考价值&lt;/li&gt;
+&lt;li&gt;场景适应性：不同环境下先验概率的调整机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;关于统计结果的应用&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;成本收益分析：统计准确性和实施成本的平衡&lt;/li&gt;
+&lt;li&gt;风险评估：错误决策的代价考量&lt;/li&gt;
+&lt;li&gt;动态调整机制：如何根据新数据不断优化模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;系统复杂性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多因素交互：多个条件概率相互影响&lt;/li&gt;
+&lt;li&gt;数据偏差：如何处理采样偏差和测量误差&lt;/li&gt;
+&lt;li&gt;反馈循环：决策结果如何反过来影响先验概率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;附件&quot;&gt;&lt;a href=&quot;#附件&quot; class=&quot;headerlink&quot; title=&quot;附件&quot;&gt;&lt;/a&gt;附件&lt;/h2&gt;&lt;h5 id=&quot;贝叶斯公式&quot;&gt;&lt;a href=&quot;#贝叶斯公式&quot; class=&quot;headerlink&quot; title=&quot;贝叶斯公式&quot;&gt;&lt;/a&gt;贝叶斯公式&lt;/h5&gt;&lt;p&gt;&lt;img src=&quot;/images/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F.png&quot;&gt;&lt;/p&gt;
+&lt;h5 id=&quot;以医学诊断为示例的代码&quot;&gt;&lt;a href=&quot;#以医学诊断为示例的代码&quot; class=&quot;headerlink&quot; title=&quot;以医学诊断为示例的代码&quot;&gt;&lt;/a&gt;以医学诊断为示例的代码&lt;/h5&gt;&lt;p&gt;&lt;code&gt;def bayes_medical_diagnosis(prevalence, sensitivity, specificity, test_positive):&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# prevalence: 疾病发生率（先验概率）&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# sensitivity: 灵敏度（真阳性率）&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# specificity: 特异度（真阴性率）&lt;/code&gt;&lt;br&gt;    &lt;code&gt;# test_positive: 检测呈阳性的概率&lt;/code&gt;  &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;posterior = (sensitivity * prevalence) / ( 
+    sensitivity * prevalence + 
+    (1 - specificity) * (1 - prevalence)  
+)
+return posterior
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;本文使用的AI包括&quot;&gt;&lt;a href=&quot;#本文使用的AI包括&quot; class=&quot;headerlink&quot; title=&quot;本文使用的AI包括&quot;&gt;&lt;/a&gt;本文使用的AI包括&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;对话页面：Sider浏览器插件&lt;/li&gt;
+&lt;li&gt;教学AI：Claude 3.5 Haiku&lt;/li&gt;
+&lt;li&gt;公式图生成：DeepSeek</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://applejamm.github.io/applejamm.github.io/categories/AI/"/>
+    
+    
+    <category term="产品经理" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+    
+    <category term="AI" scheme="https://applejamm.github.io/applejamm.github.io/tags/AI/"/>
+    
+    <category term="贝叶斯定理" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/"/>
+    
+    <category term="prompt" scheme="https://applejamm.github.io/applejamm.github.io/tags/prompt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目经理竟然说不怕延期，你们停下来修bug吧</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2024/06/27/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%AB%9F%E7%84%B6%E8%AF%B4%E4%B8%8D%E6%80%95%E5%BB%B6%E6%9C%9F%EF%BC%8C%E4%BD%A0%E4%BB%AC%E5%81%9C%E4%B8%8B%E6%9D%A5%E4%BF%AEbug%E5%90%A7/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2024/06/27/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%AB%9F%E7%84%B6%E8%AF%B4%E4%B8%8D%E6%80%95%E5%BB%B6%E6%9C%9F%EF%BC%8C%E4%BD%A0%E4%BB%AC%E5%81%9C%E4%B8%8B%E6%9D%A5%E4%BF%AEbug%E5%90%A7/</id>
+    <published>2024-06-27T15:58:45.000Z</published>
+    <updated>2024-06-27T16:19:55.131Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果我们因为第一个sprint质量不好，延期sprint，会引起整个项目的延期怎么办？项目经理不应该担心吗？&lt;/p&gt;
+&lt;p&gt;这个问题要有几个思考点&lt;/p&gt;
+&lt;p&gt;一，质量有多重要？&lt;strong&gt;软件质量建设是软件工作的成本&lt;/strong&gt;（来自《持续交付》作者乔梁）质量越好，成本越低，效益越高；软件的质量问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;今天不解决，明天也要解决，即软件质量是无法回避的；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;较早解决比较晚解决好，即软件质量会蔓延影响系统其他部分的建设、也会影响上下游系统建设；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以说即使人为强制第二个批次开始，并不会真的避免延期。只会因为质量隐患似的进度变得更不可控，增加整个建设的成本。 &lt;/p&gt;
+&lt;p&gt;二，在发现质量问题时第一时间喊停和建设质量，可以在较早期发现整个项目的风险，从而通过其他手段对项目风险进行控制。在现在的大多数软件工程中，逐步交付价值是需求方普遍接受的，即交付范围通常是可协商的，而交付时间的不确定和交付质量差往往是不能被接受的，即&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;没有按照约定时间交付任何东西；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;不断延期无法准确预估交付时间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;交付但是bug非常多甚至不可用；&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;都会导致需求方丧失信心，甚至导致项目的全部失败&lt;/p&gt;
+&lt;p&gt;基于上的价值取向，我们以质量建设和时间盒为高优先级，减少交付批次（即交付更少的功能）维持稳定持续的质量交付；&lt;/p&gt;
+&lt;p&gt;三，项目管理应该从“聚焦于按照时间计划完成”变成 &lt;strong&gt;“聚焦于按照优先级有节奏交付”&lt;/strong&gt;。原因在于度量项目成功的不是每个时间节点完成计划要做的事情，而是&lt;strong&gt;每个时间节点交付客户（上下游都是客户）需要的业务价值；&lt;/strong&gt; 换一个角度看，&lt;strong&gt;延期&lt;/strong&gt;  是真的问题本身吗？还是无价值产出、价值产出无节奏才令人头大？&lt;/p&gt;
+&lt;p&gt;四，最后，软件计划几乎很少生效，因为软件建设不同于普通工程，它非常复杂充满变数，往往在全部完成时复杂度才能被完整认知。与其预先制定计划，更应采用随时调整计划的方式进行管理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;plan is nothing， planing is everything&lt;/strong&gt;。这个过程，研发管理应该既要有宏观视角，又要避免做大而全的计划，采用JIT（Just in</summary>
+        
+      
+    
+    
+    
+    <category term="敏捷" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E6%95%8F%E6%8D%B7/"/>
+    
+    
+    <category term="产品创新" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E4%BA%A7%E5%93%81%E5%88%9B%E6%96%B0/"/>
+    
+    <category term="敏捷" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E6%95%8F%E6%8D%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更新-增加了评论区</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2024/06/27/%E6%9B%B4%E6%96%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2024/06/27/%E6%9B%B4%E6%96%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</id>
+    <published>2024-06-27T15:22:45.000Z</published>
+    <updated>2024-06-27T15:45:27.010Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;更新已经有评论区了。。。。&lt;/p&gt;
+&lt;p&gt;通过AI支持了解了hexo如何启用评论插件。&lt;br&gt;&lt;img src=&quot;/images/Pasted%20image%2020240627232520.png&quot; alt=&quot;如何启动&quot;&gt;&lt;/p&gt;
+&lt;p&gt;当前模版中有多种hexo评论插件可选，请AI对比各插件的优劣，选择了LeanCloud支持下的&lt;br&gt;&lt;img src=&quot;/images/Pasted%20image%2020240627232627.png&quot; alt=&quot;对比插件&quot;&gt;&lt;/p&gt;
+&lt;p&gt;再给点指引，修改yaml文件。然后本地运行了一下没啥问题，然后就部署。结束&lt;br&gt;&lt;img src=&quot;/images/Pasted%20image%2020240627232656.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自留地" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E8%87%AA%E7%95%99%E5%9C%B0/"/>
+    
+    
+    <category term="helloworld" scheme="https://applejamm.github.io/applejamm.github.io/tags/helloworld/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>巴别塔隐喻与敏捷中的文档视角</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2024/06/19/%E5%B7%B4%E5%88%AB%E5%A1%94%E9%9A%90%E5%96%BB%E4%B8%8E%E6%95%8F%E6%8D%B7%E4%B8%AD%E7%9A%84%E6%96%87%E6%A1%A3%E8%A7%86%E8%A7%92/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2024/06/19/%E5%B7%B4%E5%88%AB%E5%A1%94%E9%9A%90%E5%96%BB%E4%B8%8E%E6%95%8F%E6%8D%B7%E4%B8%AD%E7%9A%84%E6%96%87%E6%A1%A3%E8%A7%86%E8%A7%92/</id>
+    <published>2024-06-19T15:19:01.000Z</published>
+    <updated>2024-06-27T15:18:29.503Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;巴别塔是《圣经·创世纪》中的故事中的一座塔，也称为巴别塔。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;据说，在人类的早期历史中，人们试图建造一座高耸入云的塔，以挑战上帝的权威。上帝为了阻止他们的傲慢和自大，使他们的语言混乱，导致他们无法互相理解，从而使得他们无法完成塔的建设。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;敏捷开发是如何看待文档的&quot;&gt;&lt;a href=&quot;#敏捷开发是如何看待文档的&quot; class=&quot;headerlink&quot; title=&quot;敏捷开发是如何看待文档的&quot;&gt;&lt;/a&gt;敏捷开发是如何看待文档的&lt;/h2&gt;&lt;p&gt;在传统软件开发中，从需求到设计再到测试，每个环节和岗位都需要编写文档。&lt;br&gt;大多数文档会随着软件功能上线而无人问津。&lt;br&gt;敏捷方法论认为，面对面交流才最靠谱，软件才是王道。所以，敏捷派们喜欢用可运行的软件替代繁琐的文档，这样可以加快沟通和提高团队协作效率。用软件代替文档，团队就能更流畅地交流、更快地做决策，项目交付体验也更灵活更出色。&lt;/p&gt;
+&lt;h2 id=&quot;为什么弱化文档&quot;&gt;&lt;a href=&quot;#为什么弱化文档&quot; class=&quot;headerlink&quot; title=&quot;为什么弱化文档&quot;&gt;&lt;/a&gt;为什么弱化文档&lt;/h2&gt;&lt;h3 id=&quot;1-直接验收和反馈&quot;&gt;&lt;a href=&quot;#1-直接验收和反馈&quot; class=&quot;headerlink&quot; title=&quot;1. 直接验收和反馈&quot;&gt;&lt;/a&gt;1. 直接验收和反馈&lt;/h3&gt;&lt;p&gt;敏捷方法论认为，最重要的产出是一款可以工作的软件，而不是一堆详尽的文档。文档可能会带来解读的歧义，而软件则直接展示了功能和效果。通过软件验收，用户和团队可以更迅速地反馈意见，从而及时调整和改进。&lt;/p&gt;
+&lt;h3 id=&quot;2-增强团队沟通&quot;&gt;&lt;a href=&quot;#2-增强团队沟通&quot; class=&quot;headerlink&quot; title=&quot;2. 增强团队沟通&quot;&gt;&lt;/a&gt;2. 增强团队沟通&lt;/h3&gt;&lt;p&gt;与其通过繁杂的文档传递信息，敏捷方法论更倡导面对面的沟通。面对面的交流方式可以减少信息丢失和误解，提高沟通效率。文档替代的概念鼓励团队成员频繁互动，更好地分享见解和思路。&lt;/p&gt;
+&lt;h3 id=&quot;3-提升灵活性和适应性&quot;&gt;&lt;a href=&quot;#3-提升灵活性和适应性&quot; class=&quot;headerlink&quot; title=&quot;3. 提升灵活性和适应性&quot;&gt;&lt;/a&gt;3. 提升灵活性和适应性&lt;/h3&gt;&lt;p&gt;市场和用户需求不断变化，详尽的文档不易随时更新和维护，容易变得过时。可运行的软件能够快速展示新功能和更新，让团队更具灵活性，能够及时响应客户和市场的变化。&lt;/p&gt;
+&lt;h3 id=&quot;4-减少浪费，聚焦价值&quot;&gt;&lt;a href=&quot;#4-减少浪费，聚焦价值&quot; class=&quot;headerlink&quot; title=&quot;4. 减少浪费，聚焦价值&quot;&gt;&lt;/a&gt;4. 减少浪费，聚焦价值&lt;/h3&gt;&lt;p&gt;撰写和维护详尽文档需要大量的人力和时间，而其中不少内容可能最终没有实际用处。敏捷方法论提倡“精益思维”，避免各种类型的浪费，将更多资源投入到真正为客户创造价值的工作中。&lt;/p&gt;
+&lt;h3 id=&quot;5-促进持续交付和迭代&quot;&gt;&lt;a href=&quot;#5-促进持续交付和迭代&quot; class=&quot;headerlink&quot; title=&quot;5. 促进持续交付和迭代&quot;&gt;&lt;/a&gt;5. 促进持续交付和迭代&lt;/h3&gt;&lt;p&gt;敏捷开发以快速迭代和持续交付为特点，短期内交付可运行的软件版本有助于检测和调整方向。详尽文档的撰写与维护可能会拖慢这个过程，而实际的软件版本能够帮助团队更快得到验证。&lt;/p&gt;
+&lt;h3 id=&quot;6-简化复杂性和不确定性管理&quot;&gt;&lt;a href=&quot;#6-简化复杂性和不确定性管理&quot; class=&quot;headerlink&quot; title=&quot;6. 简化复杂性和不确定性管理&quot;&gt;&lt;/a&gt;6. 简化复杂性和不确定性管理&lt;/h3&gt;&lt;p&gt;软件开发本身就是一个复杂且充满不确定性的过程，详尽的文档无法提前预见所有问题和变化。通过可运行的软件，团队可以在每次迭代中暴露出潜在问题并及时解决，从而更加流畅地应对复杂性和不确定性。&lt;/p&gt;
+&lt;p&gt;总结来说，敏捷方法论强调用软件代替详尽文档，是为了实现更直接的验收与反馈、增强团队沟通、提升灵活性与适应性、减少浪费、促进持续交付和更好地应对复杂性和不确定性。这些理念都指向了一个共同目标：更高效地交付客户价值。&lt;/p&gt;
+&lt;h2 id=&quot;我们本来就有协作修建通天高塔的能力&quot;&gt;&lt;a href=&quot;#我们本来就有协作修建通天高塔的能力&quot; class=&quot;headerlink&quot; title=&quot;我们本来就有协作修建通天高塔的能力&quot;&gt;&lt;/a&gt;我们本来就有协作修建通天高塔的能力&lt;/h2&gt;&lt;p&gt;我极其钟爱巴别塔这个比喻，它总是让我感慨语言的局限之苍白。时时警醒我莫要沉迷在语言中。&lt;/p&gt;
+&lt;p&gt;&amp;#x3D;&amp;#x3D;人们因为语言不通，分崩离析，高塔倒塌。&amp;#x3D;&amp;#x3D;&lt;/p&gt;
+&lt;p&gt;如果你的工作大量依赖沟通，你一定会非常认可，沟通的误解会有多频繁和深刻的影响每个人。&lt;/p&gt;
+&lt;h2 id=&quot;高塔牌&quot;&gt;&lt;a href=&quot;#高塔牌&quot; class=&quot;headerlink&quot; title=&quot;高塔牌&quot;&gt;&lt;/a&gt;高塔牌&lt;/h2&gt;&lt;p&gt;在塔罗牌中，就有一张主牌叫the Tower，画面上就是坍塌的高塔和跌落的男人们、女人们。&lt;br&gt;塔牌在塔罗牌中意味着不可抗力导致的破坏。它是非常强大的无法回避的一张牌。&lt;br&gt;这张牌总是提醒我不要再堕入巴别塔般的绝望之故事中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/towertarot.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="敏捷" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E6%95%8F%E6%8D%B7/"/>
+    
+    
+    <category term="沟通" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E6%B2%9F%E9%80%9A/"/>
+    
+    <category term="敏捷" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E6%95%8F%E6%8D%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0-1孵化日记</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2024/06/14/0-1%E5%AD%B5%E5%8C%96%E6%97%A5%E8%AE%B0/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2024/06/14/0-1%E5%AD%B5%E5%8C%96%E6%97%A5%E8%AE%B0/</id>
+    <published>2024-06-13T16:24:12.000Z</published>
+    <updated>2024-06-20T16:20:27.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我2023年一个IT产品孵化项目中做产品负责人，这块产品服务的业务属于toB的一个专业域。&lt;/p&gt;
+&lt;p&gt;业务背景为&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;企业组织需要从行业内引入一套全新的解决方案，用来降低协同成本，建设组织内的信息总线。&lt;/li&gt;
+&lt;li&gt;企业组织缺乏有经验的业务方和IT方，需要重新组建完整的团队，属于孵化项目。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;很快，我们公司招聘的业务专家以业务负责人的身份开始参与项目，进行立项提案时她根据友商经验做了全景规划，其中业务需求包括两个部分&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;业务负责人所在业务域的业务流程变革和工具需求&lt;/li&gt;
+&lt;li&gt;工具需求可覆盖的扩展业务域，共2个，目的是摊平建设成本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我识别到几个要素，决定采用分而治之的方式，避免需求蔓延导致的浪费，特别是通过聚焦保证资源集中解决关键问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先业务专家对我们企业的业务和运作并不了解，有可能陷入闭门造车&lt;/li&gt;
+&lt;li&gt;扩展业务域放在项目中的目的与业务价值关联不密切，可能形成建设浪费。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对了验证我担心的问题，我的策略是&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根据业务的具体场景设计产品功能，不做蔓延，控制落地效果。简单说就是，只做具体的定制化方案，绝不over-thinking。&lt;/li&gt;
+&lt;li&gt;采用demo产品，几乎无成本的提供扩展业务域的试用，并触及扩展域用户，并尝试搜集需求验证其相关性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;事后证明了，我们比较成功的避免浪费&lt;/p&gt;
+&lt;p&gt;在扩展业务域中，有一块业务虽然参与立项，但在项目过程的参与度非常低。我们提供了长达4个月以上的试用，接受不到任何用户反馈。通过这个客观事实，我成功的说服业务负责人，停止该业务的产品建设投入。&lt;/p&gt;
+&lt;p&gt;在年底访谈中，我发现这块业务域在本项目立项后，很快找到了其他的替代方案，所以他们早就放弃了参与本产品建设。如果我们坚持搜集需求，我们很可能会搜集大量的伪需求，并且产生浪费。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="产品" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+    <category term="产品创新" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E4%BA%A7%E5%93%81%E5%88%9B%E6%96%B0/"/>
+    
+    <category term="产品经理" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+    
+    <category term="数字化" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E6%95%B0%E5%AD%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>敏捷</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2024/06/13/%E6%95%8F%E6%8D%B7/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2024/06/13/%E6%95%8F%E6%8D%B7/</id>
+    <published>2024-06-13T15:58:52.000Z</published>
+    <updated>2024-06-27T14:56:07.215Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;敏捷软件开发的四个核心价值是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;个体和互动高于流程和工具&lt;/li&gt;
+&lt;li&gt;工作的软件高于详尽的文档&lt;/li&gt;
+&lt;li&gt;客户合作高于合同谈判&lt;/li&gt;
+&lt;li&gt;响应变化高于遵循计划&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们遵循以下准则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;我们的最高目标是，通过尽早和持续地交付有价值的软件来满足客户。&lt;/li&gt;
+&lt;li&gt;欢迎对需求提出变更–</summary>
+        
+      
+    
+    
+    
+    <category term="敏捷" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E6%95%8F%E6%8D%B7/"/>
+    
+    
+    <category term="敏捷" scheme="https://applejamm.github.io/applejamm.github.io/tags/%E6%95%8F%E6%8D%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://applejamm.github.io/applejamm.github.io/2024/06/12/hello-world/"/>
+    <id>https://applejamm.github.io/applejamm.github.io/2024/06/12/hello-world/</id>
+    <published>2024-06-12T15:37:35.000Z</published>
+    <updated>2024-06-24T13:57:45.349Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;$ hexo new &lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;$ hexo server&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;$ hexo generate&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;$ hexo deploy&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="自留地" scheme="https://applejamm.github.io/applejamm.github.io/categories/%E8%87%AA%E7%95%99%E5%9C%B0/"/>
+    
+    
+    <category term="helloworld" scheme="https://applejamm.github.io/applejamm.github.io/tags/helloworld/"/>
+    
+  </entry>
+  
+</feed>

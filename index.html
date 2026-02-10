@@ -1,0 +1,929 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="马菲菲">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="马菲菲的博客，跟你聊聊研发管理、冥想和一些持续创新的事">
+<meta property="og:type" content="website">
+<meta property="og:title" content="苹果圈圈">
+<meta property="og:url" content="https://applejamm.github.io/applejamm.github.io/index.html">
+<meta property="og:site_name" content="苹果圈圈">
+<meta property="og:description" content="马菲菲的博客，跟你聊聊研发管理、冥想和一些持续创新的事">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="马菲菲">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>苹果圈圈</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"applejamm.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-HKSQK1E2M0"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"fMQdp5DkEG9VI4SAoQ1dhQwj-gzGzoHsz","app_key":"kTy66irEm5DKL1Gs8NbvVPKH","server_url":"https://fmqdp5dk.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-HKSQK1E2M0", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-HKSQK1E2M0');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="苹果圈圈" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>苹果圈圈</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">冥想、力量、躾</span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/02/09/%E5%BD%93%20AI%20%E7%AD%94%E5%BE%97%E3%80%8C%E5%AF%B9%E3%80%8D%E5%8D%B4%E4%B8%8D%E5%A4%9F%E5%87%86%E2%80%94%E2%80%94%E4%BF%A1%E6%81%AF%E9%97%AD%E7%8E%AF%E9%87%8C%E4%BA%A7%E5%93%81%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88/" target="_self">
+          当 AI 答得「对」却不够准——信息闭环里产品能做什么
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2025/02/09/%E5%BD%93%20AI%20%E7%AD%94%E5%BE%97%E3%80%8C%E5%AF%B9%E3%80%8D%E5%8D%B4%E4%B8%8D%E5%A4%9F%E5%87%86%E2%80%94%E2%80%94%E4%BF%A1%E6%81%AF%E9%97%AD%E7%8E%AF%E9%87%8C%E4%BA%A7%E5%93%81%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88/" target="_self">
+        <div>
+          当 AI 答得「对」却不够准——信息闭环里产品能做什么用户问了一个问题，AI 给了答案。答案没有明显错误，但总差那么一点：要么不够贴题，要么不是「你最想给用户的那一个」。这种体验，很多接入了知识库或 RAG 的产品都遇到过。问题往往不在模型「会不会说」，而在信息从进到出的整条链路上，哪一环节松了。  不准，是人没说清还是信息太杂？一类是人这边没说清楚。用户自己也没法完整描述问题：话太模糊、太口语，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-02-09 12:00" pubdate>
+              2025-02-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" class="category-chain-item">未分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/">#未分类</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/" target="_self">
+          <img src="/images/Bayesian%20Secret%20Garden.png" srcset="/img/loading.gif" lazyload alt="贝叶斯的对话">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/" target="_self">
+          贝叶斯的对话
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2025/01/31/%E4%B8%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AF%B9%E8%AF%9D/" target="_self">
+        <div>
+          贝叶斯是谁？AI：托马斯·贝叶斯（Thomas Bayes，1702-1761）是一位英国数学家、统计学家和长老会牧师，他提出的贝叶斯定理为概率论和统计学的发展做出了革命性的贡献。  出生：1702年，伦敦 职业：神职人员和业余数学家 教育：爱丁堡大学 去世：1761年 特点：生前默默无闻，死后成名  贝叶斯定理解释 学习和练习（这部分为Claude） Prompt：向我提问，根据我的反馈进行判断
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2025-01-31 14:23" pubdate>
+              2025-01-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/AI/" class="category-chain-item">AI</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">#产品经理</a>
+            
+              <a href="/tags/AI/">#AI</a>
+            
+              <a href="/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86/">#贝叶斯定理</a>
+            
+              <a href="/tags/prompt/">#prompt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/06/27/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%AB%9F%E7%84%B6%E8%AF%B4%E4%B8%8D%E6%80%95%E5%BB%B6%E6%9C%9F%EF%BC%8C%E4%BD%A0%E4%BB%AC%E5%81%9C%E4%B8%8B%E6%9D%A5%E4%BF%AEbug%E5%90%A7/" target="_self">
+          <img src="/images/reshot-icon-bug-fix-Z6TB9YUW3A.svg" srcset="/img/loading.gif" lazyload alt="项目经理竟然说不怕延期，你们停下来修bug吧">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/27/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%AB%9F%E7%84%B6%E8%AF%B4%E4%B8%8D%E6%80%95%E5%BB%B6%E6%9C%9F%EF%BC%8C%E4%BD%A0%E4%BB%AC%E5%81%9C%E4%B8%8B%E6%9D%A5%E4%BF%AEbug%E5%90%A7/" target="_self">
+          项目经理竟然说不怕延期，你们停下来修bug吧
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/06/27/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%AB%9F%E7%84%B6%E8%AF%B4%E4%B8%8D%E6%80%95%E5%BB%B6%E6%9C%9F%EF%BC%8C%E4%BD%A0%E4%BB%AC%E5%81%9C%E4%B8%8B%E6%9D%A5%E4%BF%AEbug%E5%90%A7/" target="_self">
+        <div>
+          如果我们因为第一个sprint质量不好，延期sprint，会引起整个项目的延期怎么办？项目经理不应该担心吗？ 这个问题要有几个思考点 一，质量有多重要？软件质量建设是软件工作的成本（来自《持续交付》作者乔梁）质量越好，成本越低，效益越高；软件的质量问题  今天不解决，明天也要解决，即软件质量是无法回避的；  较早解决比较晚解决好，即软件质量会蔓延影响系统其他部分的建设、也会影响上下游系统建设；
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-27 23:58" pubdate>
+              2024-06-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%8F%E6%8D%B7/" class="category-chain-item">敏捷</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%A7%E5%93%81%E5%88%9B%E6%96%B0/">#产品创新</a>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7/">#敏捷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/06/27/%E6%9B%B4%E6%96%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" target="_self">
+          <img src="/images/cms-265128_640.jpg" srcset="/img/loading.gif" lazyload alt="更新-增加了评论区">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/27/%E6%9B%B4%E6%96%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" target="_self">
+          更新-增加了评论区
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/06/27/%E6%9B%B4%E6%96%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" target="_self">
+        <div>
+          更新已经有评论区了。。。。 通过AI支持了解了hexo如何启用评论插件。 当前模版中有多种hexo评论插件可选，请AI对比各插件的优劣，选择了LeanCloud支持下的 再给点指引，修改yaml文件。然后本地运行了一下没啥问题，然后就部署。结束
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-27 23:22" pubdate>
+              2024-06-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%87%AA%E7%95%99%E5%9C%B0/" class="category-chain-item">自留地</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/helloworld/">#helloworld</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/06/19/%E5%B7%B4%E5%88%AB%E5%A1%94%E9%9A%90%E5%96%BB%E4%B8%8E%E6%95%8F%E6%8D%B7%E4%B8%AD%E7%9A%84%E6%96%87%E6%A1%A3%E8%A7%86%E8%A7%92/" target="_self">
+          <img src="/images/bbt1.png" srcset="/img/loading.gif" lazyload alt="巴别塔隐喻与敏捷中的文档视角">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/19/%E5%B7%B4%E5%88%AB%E5%A1%94%E9%9A%90%E5%96%BB%E4%B8%8E%E6%95%8F%E6%8D%B7%E4%B8%AD%E7%9A%84%E6%96%87%E6%A1%A3%E8%A7%86%E8%A7%92/" target="_self">
+          巴别塔隐喻与敏捷中的文档视角
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/06/19/%E5%B7%B4%E5%88%AB%E5%A1%94%E9%9A%90%E5%96%BB%E4%B8%8E%E6%95%8F%E6%8D%B7%E4%B8%AD%E7%9A%84%E6%96%87%E6%A1%A3%E8%A7%86%E8%A7%92/" target="_self">
+        <div>
+          巴别塔是《圣经·创世纪》中的故事中的一座塔，也称为巴别塔。 据说，在人类的早期历史中，人们试图建造一座高耸入云的塔，以挑战上帝的权威。上帝为了阻止他们的傲慢和自大，使他们的语言混乱，导致他们无法互相理解，从而使得他们无法完成塔的建设。 敏捷开发是如何看待文档的在传统软件开发中，从需求到设计再到测试，每个环节和岗位都需要编写文档。大多数文档会随着软件功能上线而无人问津。敏捷方法论认为，面对面交流才最
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-19 23:19" pubdate>
+              2024-06-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%8F%E6%8D%B7/" class="category-chain-item">敏捷</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B2%9F%E9%80%9A/">#沟通</a>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7/">#敏捷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/14/0-1%E5%AD%B5%E5%8C%96%E6%97%A5%E8%AE%B0/" target="_self">
+          0-1孵化日记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/14/0-1%E5%AD%B5%E5%8C%96%E6%97%A5%E8%AE%B0/" target="_self">
+        <div>
+          我2023年一个IT产品孵化项目中做产品负责人，这块产品服务的业务属于toB的一个专业域。 业务背景为  企业组织需要从行业内引入一套全新的解决方案，用来降低协同成本，建设组织内的信息总线。 企业组织缺乏有经验的业务方和IT方，需要重新组建完整的团队，属于孵化项目。  很快，我们公司招聘的业务专家以业务负责人的身份开始参与项目，进行立项提案时她根据友商经验做了全景规划，其中业务需求包括两个部分
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-14 00:24" pubdate>
+              2024-06-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%A7%E5%93%81%E5%88%9B%E6%96%B0/">#产品创新</a>
+            
+              <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/">#产品经理</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%97%E5%8C%96/">#数字化</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/13/%E6%95%8F%E6%8D%B7/" target="_self">
+          敏捷
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/13/%E6%95%8F%E6%8D%B7/" target="_self">
+        <div>
+          敏捷软件开发的四个核心价值是  个体和互动高于流程和工具 工作的软件高于详尽的文档 客户合作高于合同谈判 响应变化高于遵循计划  我们遵循以下准则：  我们的最高目标是，通过尽早和持续地交付有价值的软件来满足客户。 欢迎对需求提出变更– 即使是在项目开发后期。要善于利用需求变更，帮助客户获得竞争优势 要不断交付可用的软件，周期从几周到几个月不等，且越短越好。 项目过程中，业务人员与开发人员必须在一
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-13 23:58" pubdate>
+              2024-06-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%8F%E6%8D%B7/" class="category-chain-item">敏捷</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7/">#敏捷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2024/06/12/hello-world/" target="_self">
+          <img src="/images/deja-vu.jpg" srcset="/img/loading.gif" lazyload alt="Hello World">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/06/12/hello-world/" target="_self">
+          Hello World
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/2024/06/12/hello-world/" target="_self">
+        <div>
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-06-12 23:37" pubdate>
+              2024-06-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%87%AA%E7%95%99%E5%9C%B0/" class="category-chain-item">自留地</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/helloworld/">#helloworld</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="/atom.xml">Subscribe to RSS Feed</a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

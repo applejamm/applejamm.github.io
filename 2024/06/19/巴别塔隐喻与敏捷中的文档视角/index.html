@@ -1,0 +1,758 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="马菲菲">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="巴别塔是《圣经·创世纪》中的故事中的一座塔，也称为巴别塔。 据说，在人类的早期历史中，人们试图建造一座高耸入云的塔，以挑战上帝的权威。上帝为了阻止他们的傲慢和自大，使他们的语言混乱，导致他们无法互相理解，从而使得他们无法完成塔的建设。 敏捷开发是如何看待文档的在传统软件开发中，从需求到设计再到测试，每个环节和岗位都需要编写文档。大多数文档会随着软件功能上线而无人问津。敏捷方法论认为，面对面交流才最">
+<meta property="og:type" content="article">
+<meta property="og:title" content="巴别塔隐喻与敏捷中的文档视角">
+<meta property="og:url" content="https://applejamm.github.io/applejamm.github.io/2024/06/19/%E5%B7%B4%E5%88%AB%E5%A1%94%E9%9A%90%E5%96%BB%E4%B8%8E%E6%95%8F%E6%8D%B7%E4%B8%AD%E7%9A%84%E6%96%87%E6%A1%A3%E8%A7%86%E8%A7%92/index.html">
+<meta property="og:site_name" content="苹果圈圈">
+<meta property="og:description" content="巴别塔是《圣经·创世纪》中的故事中的一座塔，也称为巴别塔。 据说，在人类的早期历史中，人们试图建造一座高耸入云的塔，以挑战上帝的权威。上帝为了阻止他们的傲慢和自大，使他们的语言混乱，导致他们无法互相理解，从而使得他们无法完成塔的建设。 敏捷开发是如何看待文档的在传统软件开发中，从需求到设计再到测试，每个环节和岗位都需要编写文档。大多数文档会随着软件功能上线而无人问津。敏捷方法论认为，面对面交流才最">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://applejamm.github.io/images/bbt1.png">
+<meta property="article:published_time" content="2024-06-19T15:19:01.000Z">
+<meta property="article:modified_time" content="2024-06-27T15:18:29.503Z">
+<meta property="article:author" content="马菲菲">
+<meta property="article:tag" content="沟通">
+<meta property="article:tag" content="敏捷">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://applejamm.github.io/images/bbt1.png">
+  
+  
+  
+  <title>巴别塔隐喻与敏捷中的文档视角 - 苹果圈圈</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"applejamm.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-HKSQK1E2M0"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"fMQdp5DkEG9VI4SAoQ1dhQwj-gzGzoHsz","app_key":"kTy66irEm5DKL1Gs8NbvVPKH","server_url":"https://fmqdp5dk.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-HKSQK1E2M0", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-HKSQK1E2M0');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="苹果圈圈" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>苹果圈圈</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/bbt1.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">巴别塔隐喻与敏捷中的文档视角</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-06-19 23:19" pubdate>
+          2024年6月19日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">巴别塔隐喻与敏捷中的文档视角</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><em>巴别塔是《圣经·创世纪》中的故事中的一座塔，也称为巴别塔。</em></p>
+<p><em>据说，在人类的早期历史中，人们试图建造一座高耸入云的塔，以挑战上帝的权威。上帝为了阻止他们的傲慢和自大，使他们的语言混乱，导致他们无法互相理解，从而使得他们无法完成塔的建设。</em></p>
+<h2 id="敏捷开发是如何看待文档的"><a href="#敏捷开发是如何看待文档的" class="headerlink" title="敏捷开发是如何看待文档的"></a>敏捷开发是如何看待文档的</h2><p>在传统软件开发中，从需求到设计再到测试，每个环节和岗位都需要编写文档。<br>大多数文档会随着软件功能上线而无人问津。<br>敏捷方法论认为，面对面交流才最靠谱，软件才是王道。所以，敏捷派们喜欢用可运行的软件替代繁琐的文档，这样可以加快沟通和提高团队协作效率。用软件代替文档，团队就能更流畅地交流、更快地做决策，项目交付体验也更灵活更出色。</p>
+<h2 id="为什么弱化文档"><a href="#为什么弱化文档" class="headerlink" title="为什么弱化文档"></a>为什么弱化文档</h2><h3 id="1-直接验收和反馈"><a href="#1-直接验收和反馈" class="headerlink" title="1. 直接验收和反馈"></a>1. 直接验收和反馈</h3><p>敏捷方法论认为，最重要的产出是一款可以工作的软件，而不是一堆详尽的文档。文档可能会带来解读的歧义，而软件则直接展示了功能和效果。通过软件验收，用户和团队可以更迅速地反馈意见，从而及时调整和改进。</p>
+<h3 id="2-增强团队沟通"><a href="#2-增强团队沟通" class="headerlink" title="2. 增强团队沟通"></a>2. 增强团队沟通</h3><p>与其通过繁杂的文档传递信息，敏捷方法论更倡导面对面的沟通。面对面的交流方式可以减少信息丢失和误解，提高沟通效率。文档替代的概念鼓励团队成员频繁互动，更好地分享见解和思路。</p>
+<h3 id="3-提升灵活性和适应性"><a href="#3-提升灵活性和适应性" class="headerlink" title="3. 提升灵活性和适应性"></a>3. 提升灵活性和适应性</h3><p>市场和用户需求不断变化，详尽的文档不易随时更新和维护，容易变得过时。可运行的软件能够快速展示新功能和更新，让团队更具灵活性，能够及时响应客户和市场的变化。</p>
+<h3 id="4-减少浪费，聚焦价值"><a href="#4-减少浪费，聚焦价值" class="headerlink" title="4. 减少浪费，聚焦价值"></a>4. 减少浪费，聚焦价值</h3><p>撰写和维护详尽文档需要大量的人力和时间，而其中不少内容可能最终没有实际用处。敏捷方法论提倡“精益思维”，避免各种类型的浪费，将更多资源投入到真正为客户创造价值的工作中。</p>
+<h3 id="5-促进持续交付和迭代"><a href="#5-促进持续交付和迭代" class="headerlink" title="5. 促进持续交付和迭代"></a>5. 促进持续交付和迭代</h3><p>敏捷开发以快速迭代和持续交付为特点，短期内交付可运行的软件版本有助于检测和调整方向。详尽文档的撰写与维护可能会拖慢这个过程，而实际的软件版本能够帮助团队更快得到验证。</p>
+<h3 id="6-简化复杂性和不确定性管理"><a href="#6-简化复杂性和不确定性管理" class="headerlink" title="6. 简化复杂性和不确定性管理"></a>6. 简化复杂性和不确定性管理</h3><p>软件开发本身就是一个复杂且充满不确定性的过程，详尽的文档无法提前预见所有问题和变化。通过可运行的软件，团队可以在每次迭代中暴露出潜在问题并及时解决，从而更加流畅地应对复杂性和不确定性。</p>
+<p>总结来说，敏捷方法论强调用软件代替详尽文档，是为了实现更直接的验收与反馈、增强团队沟通、提升灵活性与适应性、减少浪费、促进持续交付和更好地应对复杂性和不确定性。这些理念都指向了一个共同目标：更高效地交付客户价值。</p>
+<h2 id="我们本来就有协作修建通天高塔的能力"><a href="#我们本来就有协作修建通天高塔的能力" class="headerlink" title="我们本来就有协作修建通天高塔的能力"></a>我们本来就有协作修建通天高塔的能力</h2><p>我极其钟爱巴别塔这个比喻，它总是让我感慨语言的局限之苍白。时时警醒我莫要沉迷在语言中。</p>
+<p>&#x3D;&#x3D;人们因为语言不通，分崩离析，高塔倒塌。&#x3D;&#x3D;</p>
+<p>如果你的工作大量依赖沟通，你一定会非常认可，沟通的误解会有多频繁和深刻的影响每个人。</p>
+<h2 id="高塔牌"><a href="#高塔牌" class="headerlink" title="高塔牌"></a>高塔牌</h2><p>在塔罗牌中，就有一张主牌叫the Tower，画面上就是坍塌的高塔和跌落的男人们、女人们。<br>塔牌在塔罗牌中意味着不可抗力导致的破坏。它是非常强大的无法回避的一张牌。<br>这张牌总是提醒我不要再堕入巴别塔般的绝望之故事中</p>
+<p><img src="/images/towertarot.png" srcset="/img/loading.gif" lazyload alt="TarrotTower"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%8F%E6%8D%B7/" class="category-chain-item">敏捷</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B2%9F%E9%80%9A/" class="print-no-link">#沟通</a>
+      
+        <a href="/tags/%E6%95%8F%E6%8D%B7/" class="print-no-link">#敏捷</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>巴别塔隐喻与敏捷中的文档视角</div>
+      <div>https://applejamm.github.io/applejamm.github.io/2024/06/19/巴别塔隐喻与敏捷中的文档视角/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>马菲菲</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年6月19日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/06/27/%E6%9B%B4%E6%96%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" title="更新-增加了评论区">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">更新-增加了评论区</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/14/0-1%E5%AD%B5%E5%8C%96%E6%97%A5%E8%AE%B0/" title="0-1孵化日记">
+                        <span class="hidden-mobile">0-1孵化日记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"5kgdeSJezZRQIxbbB9mrrBwv-gzGzoHsz","appKey":"e0teg4zn7jSkU9HWe3njoCpI","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="/atom.xml">Subscribe to RSS Feed</a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="leancloud-site-pv-container" style="display: none">
+        总访问量 
+        <span id="leancloud-site-pv"></span>
+         次
+      </span>
+    
+    
+      <span id="leancloud-site-uv-container" style="display: none">
+        总访客数 
+        <span id="leancloud-site-uv"></span>
+         人
+      </span>
+    
+    
+
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
