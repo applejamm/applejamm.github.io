@@ -384,6 +384,41 @@
       body { background: #fff; }
       .page { max-width: 100%; padding: 10px; }
     }
+
+    @media (max-width: 768px) {
+      /* 报头 */
+      .masthead { padding: 12px 16px 10px; }
+      .masthead-top { flex-direction: column; align-items: center; gap: 4px; }
+      .masthead-top .left, .masthead-top .right { width: auto; text-align: center; }
+      .paper-name { font-size: 36px; letter-spacing: 4px; }
+      .paper-subtitle { font-size: 11px; letter-spacing: 2px; }
+
+      /* 主版面 */
+      .page { padding: 12px 14px; }
+
+      /* 三栏 → 单栏 */
+      .front-page { grid-template-columns: 1fr; }
+      .col { padding: 0; border: none !important; }
+      .col + .col { border-top: 1px solid #999 !important; padding-top: 16px; margin-top: 16px; }
+
+      /* 标题字号 */
+      .headline-main { font-size: 24px; }
+      .headline-sub { font-size: 16px; }
+
+      /* 二栏 → 单栏 */
+      .two-col { grid-template-columns: 1fr !important; }
+
+      /* 四栏数字格 → 二栏 */
+      .four-col { grid-template-columns: 1fr 1fr !important; }
+
+      /* 编辑总结（inline style 区域）→ 单栏 */
+      .editorial-grid { grid-template-columns: 1fr !important; }
+      .editorial-grid > div { border: none !important; padding: 0 !important; }
+      .editorial-grid > div + div { border-top: 1px solid #999 !important; padding-top: 16px !important; margin-top: 16px !important; }
+
+      /* 页脚 */
+      .footer { font-size: 9px; padding: 8px 14px; }
+    }
   </style>
 </head>
 <body>
@@ -670,7 +705,7 @@
   <hr class="divider-thick">
 
   <!-- ══════════ 编辑总结 ══════════ -->
-  <div style="display:grid; grid-template-columns: 2fr 1fr; gap:0;">
+  <div class="editorial-grid" style="display:grid; grid-template-columns: 2fr 1fr; gap:0;">
     <div style="padding-right:24px; border-right:1px solid #999;">
       <span class="section-label green">本月总评</span>
       <div class="headline-sub" style="margin-top:8px;">两条主线重塑世界格局：<br>战火中东 × AI技术浪潮</div>
