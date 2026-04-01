@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>苹果酱日报 · 2026年3月号</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=UnifrakturMaguntia&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f0e8;
+      color: #1a1a1a;
+      font-family: 'Noto Serif SC', serif;
+    }
+
+    /* ── 报头 ── */
+    .masthead {
+      background: #fff;
+      border-bottom: 4px double #1a1a1a;
+      padding: 20px 40px 12px;
+      text-align: center;
+    }
+
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 11px;
+      color: #555;
+      font-family: 'Noto Sans SC', sans-serif;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .masthead-top .left, .masthead-top .right {
+      width: 200px;
+      line-height: 1.6;
+    }
+
+    .masthead-top .right { text-align: right; }
+
+    .paper-name {
+      font-size: 72px;
+      font-weight: 900;
+      letter-spacing: 12px;
+      line-height: 1;
+      color: #0a0a0a;
+      text-shadow: 2px 2px 0 #ccc;
+    }
+
+    .paper-subtitle {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: #444;
+      margin-top: 4px;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 300;
+    }
+
+    .masthead-banner {
+      margin-top: 10px;
+      border-top: 2px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
+      padding: 5px 0;
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      letter-spacing: 2px;
+      color: #222;
+    }
+
+    /* ── 主版面 ── */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px;
+    }
+
+    /* ── 分割线 ── */
+    .divider { border: none; border-top: 1px solid #999; margin: 16px 0; }
+    .divider-thick { border: none; border-top: 3px double #1a1a1a; margin: 20px 0; }
+
+    /* ── 栏目标题 ── */
+    .section-label {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #1a1a1a;
+      display: inline-block;
+      padding: 2px 10px;
+      margin-bottom: 12px;
+    }
+
+    .section-label.red { background: #c0392b; }
+    .section-label.blue { background: #1a3a6b; }
+    .section-label.green { background: #1a6b3a; }
+    .section-label.gold { background: #8b6914; }
+
+    /* ── 头版：三栏布局 ── */
+    .front-page {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 0;
+    }
+
+    .col { padding: 0 16px; }
+    .col:first-child { padding-left: 0; border-right: 1px solid #999; }
+    .col:last-child { padding-right: 0; border-left: 1px solid #999; }
+
+    /* ── 头条 ── */
+    .headline-main {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #0a0a0a;
+      margin-bottom: 10px;
+    }
+
+    .headline-sub {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .headline-minor {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .deck {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    .byline {
+      font-size: 10px;
+      color: #777;
+      font-family: 'Noto Sans SC', sans-serif;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    /* ── 大图占位 ── */
+    .photo-block {
+      background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+      color: #e0e0e0;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 12px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.02) 20px
+      );
+    }
+
+    .photo-block .photo-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-family: 'Noto Sans SC', sans-serif;
+      opacity: 0.7;
+    }
+
+    .photo-block .photo-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 8px;
+      line-height: 1.3;
+    }
+
+    .photo-caption {
+      font-size: 10px;
+      color: #666;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-style: italic;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* ── 数据框 ── */
+    .data-box {
+      border: 2px solid #1a1a1a;
+      padding: 12px 14px;
+      margin: 12px 0;
+    }
+
+    .data-box .box-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-family: 'Noto Sans SC', sans-serif;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .data-box .data-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      padding: 3px 0;
+      border-bottom: 1px dotted #ddd;
+    }
+
+    .data-box .data-row .val {
+      font-weight: 700;
+      color: #c0392b;
+    }
+
+    .data-box .data-row .val.up::after { content: ' ▲'; font-size: 9px; }
+    .data-box .data-row .val.down { color: #27ae60; }
+    .data-box .data-row .val.down::after { content: ' ▼'; font-size: 9px; }
+
+    /* ── 引言块 ── */
+    .pullquote {
+      border-left: 4px solid #1a1a1a;
+      padding: 8px 12px;
+      margin: 12px 0;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .pullquote .attribution {
+      font-size: 10px;
+      font-style: normal;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* ── 第二版：两栏 ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .two-col .col { border-right: 1px solid #999; }
+    .two-col .col:last-child { border-right: none; border-left: none; }
+
+    /* ── 第三版：四栏简讯 ── */
+    .four-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .four-col .col {
+      border-right: 1px solid #bbb;
+      padding: 0 14px;
+    }
+
+    .four-col .col:first-child { padding-left: 0; }
+    .four-col .col:last-child { border-right: none; }
+
+    .brief-item {
+      padding: 8px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    .brief-item:last-child { border-bottom: none; }
+
+    .brief-title {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 3px;
+    }
+
+    .brief-text {
+      font-size: 11px;
+      color: #444;
+      line-height: 1.5;
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    /* ── AI专栏 ── */
+    .ai-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      margin: 10px 0;
+    }
+
+    .ai-table th {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 5px 8px;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .ai-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    .ai-table tr:nth-child(even) td { background: #f9f6f0; }
+
+    /* ── 广告/声明框 ── */
+    .notice-box {
+      border: 1px solid #999;
+      padding: 10px 14px;
+      margin: 12px 0;
+      text-align: center;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ── 页脚 ── */
+    .footer {
+      background: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 14px;
+      font-size: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
+      letter-spacing: 2px;
+      margin-top: 30px;
+    }
+
+    /* ── 破图大字 ── */
+    .overline {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #c0392b;
+      font-family: 'Noto Sans SC', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .kicker {
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 0.85;
+      margin: 4px 6px 0 0;
+      color: #1a1a1a;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { max-width: 100%; padding: 10px; }
+    }
+
+    /* ── 返回目录导航 ── */
+    .back-nav {
+      background: #1a1a1a;
+      padding: 6px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .back-nav a {
+      color: #f5f0e8;
+      text-decoration: none;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+
+    .back-nav a:hover { opacity: 1; }
+
+    .back-nav .sep {
+      color: #666;
+      font-size: 11px;
+    }
+
+    @media (max-width: 768px) {
+      .back-nav { padding: 6px 14px; }
+      /* 报头 */
+      .masthead { padding: 12px 16px 10px; }
+      .masthead-top { flex-direction: column; align-items: center; gap: 4px; }
+      .masthead-top .left, .masthead-top .right { width: auto; text-align: center; }
+      .paper-name { font-size: 36px; letter-spacing: 4px; }
+      .paper-subtitle { font-size: 11px; letter-spacing: 2px; }
+
+      /* 主版面 */
+      .page { padding: 12px 14px; }
+
+      /* 三栏 → 单栏 */
+      .front-page { grid-template-columns: 1fr; }
+      .col { padding: 0; border: none !important; }
+      .col + .col { border-top: 1px solid #999 !important; padding-top: 16px; margin-top: 16px; }
+
+      /* 标题字号 */
+      .headline-main { font-size: 24px; }
+      .headline-sub { font-size: 16px; }
+
+      /* 二栏 → 单栏 */
+      .two-col { grid-template-columns: 1fr !important; }
+
+      /* 四栏数字格 → 二栏 */
+      .four-col { grid-template-columns: 1fr 1fr !important; }
+
+      /* 编辑总结（inline style 区域）→ 单栏 */
+      .editorial-grid { grid-template-columns: 1fr !important; }
+      .editorial-grid > div { border: none !important; padding: 0 !important; }
+      .editorial-grid > div + div { border-top: 1px solid #999 !important; padding-top: 16px !important; margin-top: 16px !important; }
+
+      /* 页脚 */
+      .footer { font-size: 9px; padding: 8px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ 返回目录 ══════════ -->
+<div class="back-nav">
+  <a href="./index.html">← 所有期刊</a>
+  <span class="sep">|</span>
+  <a href="./index.html">苹果酱日报 档案室</a>
+</div>
+
+<!-- ══════════ 报头 ══════════ -->
+<div class="masthead">
+  <div class="masthead-top">
+    <div class="left">
+      总第 3031 期<br>
+      国际综合版 · 每日快报<br>
+      定价：人民币 5.00 元
+    </div>
+    <div>
+      <div class="paper-name">苹 果 酱 日 报</div>
+      <div class="paper-subtitle">APPLE JAM DAILY · FOUNDED 1980 · 全球视野  理性思考</div>
+    </div>
+    <div class="right">
+      2026年4月1日 星期三<br>
+      农历丙午年·三月初二<br>
+      <strong>停战信号 · 市场急涨特别报道</strong>
+    </div>
+  </div>
+  <div class="masthead-banner">
+    每月一刊 · AI辅助采编 · 覆盖地缘、科技、经济三大版块 &nbsp;&nbsp;|&nbsp;&nbsp; 拒绝算法投喂，只读值得读的新闻 &nbsp;&nbsp;|&nbsp;&nbsp; 免费订阅，每月直达你的收件箱
+  </div>
+</div>
+
+<!-- ══════════ 头版 ══════════ -->
+<div class="page">
+
+  <div class="front-page">
+
+    <!-- 左栏 -->
+    <div class="col">
+      <div class="section-label red">要闻速览</div>
+      
+      <div class="headline-minor">以军：今日打击伊朗所有关键军事设施</div>
+      <div class="deck">以色列军方宣布将在4月1日对伊朗所有关键军事生产设施发动打击，停战信号释放同日军事行动升级，局势仍存高度不确定性。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">伊朗警告18家美国科技公司</div>
+      <div class="deck">伊朗当局向包括云计算和芯片企业在内的18家美国科技公司发出打击警告，科技行业地缘风险上升。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">特朗普「认真考虑」退出北约</div>
+      <div class="deck">外媒援引知情人士称，特朗普正认真评估美国退出北约的可能性，此举将彻底改变战后欧洲安全格局。</div>
+      <hr class="divider">
+      
+      <div class="data-box">
+        <div class="box-title">原油价格指数</div>
+        
+        <div class="data-row"><span>布伦特原油</span><span class="val down">$98.4</span></div>
+        
+        <div class="data-row"><span>WTI美油</span><span class="val down">$94.2</span></div>
+        
+        <div class="data-row"><span>5月期货</span><span class="val down">$101.3</span></div>
+        
+        <div class="data-row"><span>美国汽油均价/加仑</span><span class="val down">$4.08</span></div>
+        
+        <div class="data-row"><span>美国柴油均价/加仑</span><span class="val down">$5.31</span></div>
+        
+      </div>
+      <div class="notice-box">
+        「市场已在定价停战，但战场还没有。」<br>—— 华尔街见闻战地分析，2026年4月1日
+      </div>
+    </div>
+
+    <!-- 中栏：头条 -->
+    <div class="col">
+      <div class="overline">4月6日截止期前夜 · 美伊释放停战信号</div>
+      <div class="headline-main">布油跌破$100 黄金升破$4700<br>特朗普称两三周内结束战事<br>全球股债齐涨</div>
+      <div class="kicker">4月1日 · 伊朗：海峡会开放，但不对美国 · 市场抢先定价停战</div>
+
+      <div class="photo-block" style="height:160px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <div class="photo-label">[ 战区示意图 ]</div>
+        <div class="photo-title">霍尔木兹海峡局势</div>
+        <div style="font-size:11px; opacity:0.6; margin-top:6px; font-family:'Noto Sans SC',sans-serif;">停战信号释放，油轮保险市场等待重启</div>
+      </div>
+
+      
+      <p class="deck drop-cap">
+        在4月6日截止期前夜，美伊双方同时释放停战信号，全球金融市场大幅反弹。伊朗高官表态「霍尔木兹海峡肯定会重新开放」，但强调「不会对美国开放」，为谈判留下模糊空间。特朗普随即宣称将在「两到三周内」结束对伊朗的军事行动。
+      </p>
+      
+      <p class="deck">
+        市场率先反应：布伦特原油跌破$100关口，收于$98.4；黄金突破$4,700，创历史新高；全球股债同步上涨，创业板涨近2%，恒指涨超2%。美元小幅走软，国债收益率全线下行。
+      </p>
+      
+      <p class="deck">
+        但军事行动并未停止。以色列宣布将于今日打击伊朗「所有关键军事生产设施」，伊朗也对18家美国科技公司发出打击警告。外交信号与战场行动同步进行，分析人士认为真正停火仍需时日。
+      </p>
+      
+
+      <div class="pullquote">
+        "霍尔木兹海峡肯定会重新开放，但不会对美国开放。"
+        <div class="attribution">—— 伊朗高级官员，2026年4月1日</div>
+      </div>
+
+      <div class="byline">本报特约记者 · 华盛顿/德黑兰/迪拜 综合报道</div>
+    </div>
+
+    <!-- 右栏 -->
+    <div class="col">
+      <div class="section-label blue">科技前沿</div>
+
+      <div class="headline-sub">OpenAI完成融资，估值$852B</div>
+      <div class="deck">OpenAI宣布完成新一轮融资，估值达8520亿美元，创科技公司未上市估值纪录。此前亚马逊$500亿战略投资已推动其加速商业化布局。</div>
+
+      <table class="ai-table">
+        <tr><th>模型</th><th>发布方</th><th>亮点</th></tr>
+        
+        <tr>
+          <td><strong>1-Bit Bonsai</strong></td>
+          <td>PrismML</td>
+          <td>首个商业可行1-bit LLM，极低能耗</td>
+        </tr>
+        
+        <tr>
+          <td><strong>TinyLoRA</strong></td>
+          <td>学术</td>
+          <td>13个参数即可推理，刷新小模型边界</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Claude Code</strong></td>
+          <td>Anthropic</td>
+          <td>源码分析文章HN 1160分，引发热议</td>
+        </tr>
+        
+        <tr>
+          <td><strong>韩国半导体</strong></td>
+          <td>产业</td>
+          <td>3月出口+151%，首破$300亿/月</td>
+        </tr>
+        
+      </table>
+
+      <hr class="divider">
+
+      
+      <div class="headline-minor">Claude Code源码泄露分析引爆HN</div>
+      <div class="deck">一篇分析Claude Code内部实现的文章在Hacker News获1160分，揭示fake tools、undercover mode等机制，引发AI工程社区广泛讨论。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">华为2025净利润680亿，汽车收入+72%</div>
+      <div class="deck">华为发布年报，净利润680亿元同比增8.7%，智能汽车业务收入大增72%，成为增长最快板块。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">巴菲特：苹果赚了$1000亿，但卖早了</div>
+      <div class="deck">巴菲特在股东大会上坦承，虽然苹果投资获利逾千亿美元，但减仓时机过早是一个错误，目前认为美股整体估值不便宜。</div>
+      <hr class="divider">
+      
+
+      <div class="data-box" style="margin-top:12px;">
+        <div class="box-title">科技资本动向</div>
+        
+        <div class="data-row"><span>OpenAI最新估值</span><span class="val up">$852B</span></div>
+        
+        <div class="data-row"><span>布伦特原油</span><span class="val down">$98.4</span></div>
+        
+        <div class="data-row"><span>黄金价格</span><span class="val up">$4,700+</span></div>
+        
+        <div class="data-row"><span>韩国半导体出口增幅</span><span class="val up">+151%</span></div>
+        
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 第二版：经济 + 地区冲突 ══════════ -->
+  <div class="two-col">
+    <div class="col">
+      <div class="section-label gold">经济·能源</div>
+      <div class="headline-sub">停战预期点火全球市场<br>布油破百关口、黄金创新高</div>
+      
+      <div class="deck">美伊停战信号令金融市场提前庆祝：布伦特原油跌破$100心理关口至$98.4，结束连续31天的三位数运行；黄金突破$4,700创历史新高，市场将避险资金部分转向风险资产。A股创业板涨近2%，恒指涨逾2%，智谱AI暴涨超30%。美欧日国债全线上扬，收益率回落。德国经济研究机构同日下调德国2026年经济增长预期，警告战争对欧洲的滞后影响仍在积累。</div>
+      
+      <div class="byline">本报经济组 · 纽约/法兰克福/上海</div>
+      <div class="data-box">
+        <div class="box-title">全球航运压力指数</div>
+        
+        <div class="data-row"><span>波斯湾保险状态</span><span class="val down">仍暂停</span></div>
+        
+        <div class="data-row"><span>绕行好望角运费溢价</span><span class="val up">+61%</span></div>
+        
+        <div class="data-row"><span>全球航运积压（TEU）</span><span class="val down">198万</span></div>
+        
+        <div class="data-row"><span>海湾食品进口中断</span><span class="val down">65%+</span></div>
+        
+      </div>
+      <div class="pullquote">
+        "市场定价的是希望，不是现实——停火协议还一个字都没签。"
+        <div class="attribution">—— 华尔街见闻首席分析师，2026年4月1日</div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="section-label red">地区冲突</div>
+      <div class="headline-sub">停战信号真假难辨：<br>外交开窗，炸弹未停</div>
+      <div class="deck">伊朗高官承认海峡会重开，特朗普称两三周结束战事，但以色列当天宣布新一轮打击计划，伊朗也对美国科技企业发出威胁。外交与军事两条线同步推进，4月6日前停火协议落地概率仍低。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">伊朗：海峡会开放，但条件是不对美国</div>
+      <div class="deck">伊朗高官措辞耐人寻味——承认海峡终将重开，但强调美国船只不在开放范围内，为后续谈判预设了极高门槛。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">特朗普：「两三周内」结束伊朗战事</div>
+      <div class="deck">特朗普在社交媒体发文称预计两到三周内结束军事行动，未提任何具体条件，白宫官员随后表示仍在谈判中。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">以色列宣布4月1日打击伊朗军事生产设施</div>
+      <div class="deck">以色列军方声明将在今日对伊朗所有关键军事生产设施发动打击，与停战信号形成直接矛盾。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">美军第82空降师抵达中东，三航母态势成形</div>
+      <div class="deck">鲁比奥称已看到战事「终点线」，但美军同步完成增兵部署，「布什」号航母出发，中东三航母格局形成。</div>
+      
+    </div>
+  </div>
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 第三版：简讯四栏 ══════════ -->
+  <div style="margin-bottom:8px;">
+    <span class="section-label">国际简讯</span>
+  </div>
+  <div class="four-col">
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">理想汽车3月交付41053辆，同比+12%</div>
+        <div class="brief-text">理想汽车公布3月交付数据，同比增长12%，在新能源车市竞争加剧背景下保持稳定增长。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">特斯拉法国3月新车注册量同比+203%</div>
+        <div class="brief-text">特斯拉在法国3月新车注册量同比暴增203%，欧洲市场需求显著回暖，与北美市场形成对比。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">宁德时代人形机器人新专利获授权</div>
+        <div class="brief-text">宁德时代新能源与机器人相关专利获国家授权，动力电池龙头加速布局具身智能赛道。</div>
+      </div>
+      
+    </div>
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">韩国半导体3月出口首破$300亿</div>
+        <div class="brief-text">韩国3月半导体出口额同比猛增151.4%，首次突破300亿美元月度关口，AI算力需求拉动存储芯片需求持续爆发。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">德国下调2026年经济增长预期</div>
+        <div class="brief-text">德国权威经济研究机构大幅下调本国2026年GDP增长预期，能源价格高企与出口萎缩是主要拖累因素。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">英国3月制造业PMI终值51</div>
+        <div class="brief-text">英国3月制造业PMI终值为51，处于荣枯线以上，但新订单增速放缓，前景仍存隐忧。</div>
+      </div>
+      
+    </div>
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">巴菲特：目前美股整体不便宜</div>
+        <div class="brief-text">巴菲特在年度股东大会上表示不会抄底当前市场，认为美股估值仍处于高位，并坦承苹果减仓「卖早了」。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">A股创业板涨近2%，智谱AI狂飙30%</div>
+        <div class="brief-text">停战预期带动风险偏好回升，A股创业板大涨，医药股全面爆发，AI概念股智谱AI单日涨超30%。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">你的公积金悄悄涨了</div>
+        <div class="brief-text">多地住房公积金缴存基数上调政策落地，覆盖数千万职工，微博热搜第一，打工人普遍感到意外惊喜。</div>
+      </div>
+      
+    </div>
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">特朗普「认真考虑」退出北约</div>
+        <div class="brief-text">外媒报道特朗普正在认真评估退出北约选项，欧洲盟国紧急展开外交斡旋，德法领导人计划紧急通话。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">志愿军老战士把家搬到烈士陵园</div>
+        <div class="brief-text">一位志愿军老战士将生活迁至烈士陵园旁守护战友，感动网友，微博热搜第二，阅读量破6亿。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">日本加速推进防卫预算至GDP的2%</div>
+        <div class="brief-text">日本国会通过新防卫预算方案，防卫费占GDP比例将提升至2%，为二战后最大规模军事扩张。</div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 编辑总结 ══════════ -->
+  <div class="editorial-grid" style="display:grid; grid-template-columns: 2fr 1fr; gap:0;">
+    <div style="padding-right:24px; border-right:1px solid #999;">
+      <span class="section-label green">本月总评</span>
+      <div class="headline-sub" style="margin-top:8px;">停战的曙光，还是下一轮升级的前奏？</div>
+      
+      <p class="deck drop-cap">今天的市场在欢呼，但欢呼的是预期，不是事实。伊朗说海峡会开，但不对美国开；特朗普说两三周结束，但没说怎么结束；以色列说今天打击，仍在执行。这不是停战，这是各方在4月6日前的最后一轮信号博弈。</p>
+      
+      <p class="deck">真正的问题是：谁先让步，谁就在国内承担政治代价。特朗普需要一个「胜利」，伊朗需要「尊严」，以色列需要「安全保证」。三方的底线没有交集，谈判窗口比市场想象的窄得多。</p>
+      
+      <p class="deck">如果4月6日过去，协议未签，下一轮打击将面向伊朗电网和淡水设施——那将是平民级的打击，不再是军事对军事。苹果酱日报将持续追踪这六天。</p>
+      
+      <div class="byline">—— 苹果酱日报编辑部</div>
+    </div>
+
+    <div style="padding-left:24px;">
+      <span class="section-label">本月关键数字</span>
+      <div class="data-box" style="margin-top:10px; border:none; padding:0;">
+        
+        <div class="data-row"><span>战争持续天数</span><span class="val up">第32天</span></div>
+        
+        <div class="data-row"><span>距4月6日截止期</span><span class="val up">5天</span></div>
+        
+        <div class="data-row"><span>布伦特原油</span><span class="val down">$98.4</span></div>
+        
+        <div class="data-row"><span>黄金价格</span><span class="val up">$4,700+</span></div>
+        
+        <div class="data-row"><span>OpenAI估值</span><span class="val up">$852B</span></div>
+        
+        <div class="data-row"><span>韩国半导体出口增幅</span><span class="val up">+151%</span></div>
+        
+        <div class="data-row"><span>华为净利润</span><span class="val up">680亿元</span></div>
+        
+        <div class="data-row"><span>A股创业板涨幅</span><span class="val up">+2%</span></div>
+        
+      </div>
+      <div class="notice-box" style="margin-top:16px; border:2px solid #1a1a1a;">
+        <strong>下期预告</strong><br><br>
+        
+        4月6日：截止期到——打还是谈？<br>
+        
+        OpenAI $852B估值：合理还是泡沫？<br>
+        
+        布油重回$100以下：能源危机真的结束了吗？<br>
+        
+        华为汽车收入+72%：智能汽车新格局<br>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════ 页脚 ══════════ -->
+<div class="footer">
+  苹果酱日报 APPLE JAM DAILY &nbsp;·&nbsp; 2026年4月1日 &nbsp;·&nbsp; 国际综合版 · 每日快报第3031期 &nbsp;·&nbsp; 数据来源：Wikipedia / CNBC / Al Jazeera / WEF / S&P Global / BuildFastWithAI &nbsp;·&nbsp; AI 辅助编辑整理
+</div>
+
+</body>
+</html>
