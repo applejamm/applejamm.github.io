@@ -3,55 +3,366 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>苹果酱日报 · 档案室</title>
+  <title>苹果酱日报 · 期刊目录</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Georgia", "Noto Serif SC", serif; background: #f5f0e8; color: #1a1a1a; max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
-    header { border-bottom: 3px double #1a1a1a; padding-bottom: 16px; margin-bottom: 32px; text-align: center; }
-    header h1 { font-size: 2.2rem; letter-spacing: 4px; margin-bottom: 4px; }
-    header p { font-size: 0.85rem; color: #666; letter-spacing: 1px; }
-    ul { list-style: none; }
-    li { border-bottom: 1px solid #ccc; }
-    li a { display: block; padding: 14px 4px; text-decoration: none; color: inherit; transition: background .15s; }
-    li a:hover { background: #ede8db; }
-    .meta { display: block; font-size: 0.75rem; color: #888; margin-bottom: 3px; font-family: monospace; }
-    .overline { display: block; font-size: 0.78rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
-    .headline { display: block; font-size: 1.05rem; font-weight: bold; line-height: 1.4; }
-    .special { display: inline-block; background: #1a1a1a; color: #f5f0e8; font-size: 0.7rem; padding: 1px 6px; margin-bottom: 4px; letter-spacing: 1px; }
-    footer { margin-top: 40px; text-align: center; font-size: 0.75rem; color: #aaa; }
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f0e8;
+      color: #1a1a1a;
+      font-family: 'Noto Serif SC', serif;
+      min-height: 100vh;
+    }
+
+    /* ── 报头 ── */
+    .masthead {
+      background: #fff;
+      border-bottom: 4px double #1a1a1a;
+      padding: 20px 40px 12px;
+      text-align: center;
+    }
+
+    .masthead-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 11px;
+      color: #555;
+      font-family: 'Noto Sans SC', sans-serif;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .masthead-top .left, .masthead-top .right {
+      width: 200px;
+      line-height: 1.6;
+    }
+
+    .masthead-top .right { text-align: right; }
+
+    .paper-name {
+      font-size: 72px;
+      font-weight: 900;
+      letter-spacing: 12px;
+      line-height: 1;
+      color: #0a0a0a;
+      text-shadow: 2px 2px 0 #ccc;
+    }
+
+    .paper-subtitle {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: #444;
+      margin-top: 4px;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 300;
+    }
+
+    .masthead-banner {
+      background: #1a1a1a;
+      color: #f5f0e8;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      letter-spacing: 1px;
+      padding: 5px 0;
+      margin: 12px -40px -12px;
+    }
+
+    /* ── 内容区 ── */
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 40px 60px;
+    }
+
+    .archive-header {
+      border-bottom: 3px solid #1a1a1a;
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .archive-header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    .archive-header .count {
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #666;
+    }
+
+    /* ── 期刊卡片 ── */
+    .issue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .issue-card {
+      background: #fff;
+      border: 1px solid #d4cec5;
+      border-top: 4px solid #1a1a1a;
+      text-decoration: none;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+
+    .issue-card:hover {
+      box-shadow: 4px 4px 0 #1a1a1a;
+      transform: translate(-2px, -2px);
+    }
+
+    .issue-card.special {
+      border-top-color: #C41E3A;
+    }
+
+    .card-top {
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid #e8e2d8;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #888;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .card-issue-no {
+      font-weight: 500;
+      color: #444;
+    }
+
+    .card-date {
+      color: #666;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-family: 'Noto Sans SC', sans-serif;
+      padding: 2px 6px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .card-tag.special {
+      background: #C41E3A;
+      color: #fff;
+    }
+
+    .card-tag.regular {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .card-headline {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+    }
+
+    .card-body {
+      padding: 10px 16px 14px;
+      flex: 1;
+    }
+
+    .card-overline {
+      font-size: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #C41E3A;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .card-summary {
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .card-footer {
+      padding: 8px 16px;
+      border-top: 1px solid #e8e2d8;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #888;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .read-link {
+      font-weight: 500;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+    }
+
+    /* ── 年份分隔 ── */
+    .year-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 32px 0 16px;
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #888;
+      letter-spacing: 2px;
+    }
+
+    .year-divider::before, .year-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #ccc;
+    }
+
+    /* ── 页脚 ── */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #aaa;
+      border-top: 1px solid #d4cec5;
+      margin-top: 40px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .masthead { padding: 12px 16px 10px; }
+      .masthead-top { flex-direction: column; align-items: center; gap: 4px; }
+      .masthead-top .left, .masthead-top .right { width: auto; text-align: center; }
+      .paper-name { font-size: 36px; letter-spacing: 4px; }
+      .paper-subtitle { font-size: 11px; letter-spacing: 2px; }
+      .masthead-banner { margin: 12px -16px -12px; }
+      .page { padding: 20px 16px 40px; }
+      .issue-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>苹果酱日报</h1>
-    <p>APPLE JAM DAILY · 档案室 · 每日更新</p>
-  </header>
-  <ul>
-    <li>
-      <a href="./2026-04-02.html">
-        <span class="meta">第 3033 期 · 2026年4月2日（星期四）</span>
-        
-        <span class="overline">美伊停战出现突破信号</span>
-        <span class="headline">伊朗总统请求停火 特朗普开价霍尔木兹海峡</span>
-      </a>
-    </li>
-    <li>
-      <a href="./2026-04-01.html">
-        <span class="meta">第 3032 期 · 2026年4月1日（星期三）</span>
-        
-        <span class="overline">AI模型与硬件双突破 · 科技投资热潮</span>
-        <span class="headline">1-bit LLM首商用 TinyLoRA仅13参数 OpenAI估值$852B 韩国半导体月出口首破$300亿</span>
-      </a>
-    </li>
-    <li>
-      <a href="./2026-03-31.html">
-        <span class="meta">2026-03-31</span>
-        
-        <span class="overline"></span>
-        <span class="headline">——</span>
-      </a>
-    </li>
-  </ul>
-  <footer>拒绝算法投喂，只读值得读的新闻</footer>
+
+<!-- ══════════ 报头 ══════════ -->
+<div class="masthead">
+  <div class="masthead-top">
+    <div class="left">
+      期刊档案室<br>
+      国际综合版 · 每日更新<br>
+      FOUNDED 1980
+    </div>
+    <div>
+      <div class="paper-name">苹 果 酱 日 报</div>
+      <div class="paper-subtitle">APPLE JAM DAILY · 全球视野  理性思考</div>
+    </div>
+    <div class="right">
+      档案室<br>
+      所有已发行期刊<br>
+      <strong>按日期倒序排列</strong>
+    </div>
+  </div>
+  <div class="masthead-banner">
+    每日更新 · AI辅助采编 · 滚动追踪最近30天 &nbsp;&nbsp;|&nbsp;&nbsp; 拒绝算法投喂，只读值得读的新闻 &nbsp;&nbsp;|&nbsp;&nbsp; 免费订阅，每日直达你的收件箱
+  </div>
+</div>
+
+<!-- ══════════ 目录内容 ══════════ -->
+<div class="page">
+
+  <div class="archive-header">
+    <h1>期 刊 目 录</h1>
+    <span class="count">共 3 期 · 持续更新中</span>
+  </div>
+
+  <div class="year-divider">2026年</div>
+
+  <div class="issue-grid">
+
+    <!-- 2026-04-01 -->
+    <a class="issue-card special" href="./2026-04-01.html">
+      <div class="card-top">
+        <div class="card-meta">
+          <span class="card-issue-no">总第 3031 期</span>
+          <span class="card-date">2026年4月1日</span>
+        </div>
+        <div class="card-tag special">停战信号 · 市场急涨特别报道</div>
+        <div class="card-headline">布油跌破$100 黄金升破$4700<br>特朗普称两三周内结束战事<br>全球股债齐涨</div>
+      </div>
+      <div class="card-body">
+        <div class="card-overline">4月6日截止期前夜 · 美伊同步释放信号</div>
+        <div class="card-summary">伊朗称海峡会开放但不对美国，以色列当日仍宣布打击计划。OpenAI完成融资估值$852B，韩国半导体出口同比+151%。</div>
+      </div>
+      <div class="card-footer">
+        <span>地缘·科技·经济</span>
+        <span class="read-link">阅读全文 →</span>
+      </div>
+    </a>
+
+    <!-- 2026-03-31 特别号 -->
+    <a class="issue-card special" href="./2026-03-31.html">
+      <div class="card-top">
+        <div class="card-meta">
+          <span class="card-issue-no">总第 3030 期</span>
+          <span class="card-date">2026年3月31日</span>
+        </div>
+        <div class="card-tag special">战争第31天 · 特别报道</div>
+        <div class="card-headline">伊朗拒绝15点和谈方案<br>焚毁科威特油轮<br>美军大规模增兵逼近</div>
+      </div>
+      <div class="card-body">
+        <div class="card-overline">4月6日截止期迫近 · 距今仅剩6天</div>
+        <div class="card-summary">外交陷入僵局，特朗普称「不在乎是否达成协议」。亚马逊$500亿押注OpenAI，黄金遭遇2008年来最差单月表现。</div>
+      </div>
+      <div class="card-footer">
+        <span>地缘·科技·经济</span>
+        <span class="read-link">阅读全文 →</span>
+      </div>
+    </a>
+
+    <!-- 2026-03 月刊 -->
+    <a class="issue-card" href="./2026-03.html">
+      <div class="card-top">
+        <div class="card-meta">
+          <span class="card-issue-no">总第 3029 期</span>
+          <span class="card-date">2026年3月29日</span>
+        </div>
+        <div class="card-tag regular">2026年3月号</div>
+        <div class="card-headline">美以联合空袭伊朗<br>哈梅内伊身亡<br>霍尔木兹封锁</div>
+      </div>
+      <div class="card-body">
+        <div class="card-overline">战争爆发 · 中东巨变</div>
+        <div class="card-summary">霍尔木兹海峡封锁，油价飙升至$120。OpenClaw发布引发AI商品化讨论，中国两会落幕，欧洲防务重整。</div>
+      </div>
+      <div class="card-footer">
+        <span>地缘·科技·经济</span>
+        <span class="read-link">阅读全文 →</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+<!-- ══════════ 页脚 ══════════ -->
+<div class="footer">
+  苹果酱日报 APPLE JAM DAILY · FOUNDED 1980 · 全球视野 理性思考<br>
+  AI辅助采编 · 免费订阅 · 每月发行
+</div>
+
 </body>
 </html>
