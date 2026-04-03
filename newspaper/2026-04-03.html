@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>苹果酱全球摘要 · 期刊目录</title>
+  <title>布伦特原油现货飙升至140美元 美银警告：百元油价可能贯穿全年 — 苹果酱全球摘要 2026年4月3日</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=UnifrakturMaguntia&display=swap');
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -13,7 +13,6 @@
       background: #f5f0e8;
       color: #1a1a1a;
       font-family: 'Noto Serif SC', serif;
-      min-height: 100vh;
     }
 
     /* ── 报头 ── */
@@ -63,198 +62,390 @@
     }
 
     .masthead-banner {
-      background: #1a1a1a;
-      color: #f5f0e8;
-      font-size: 11px;
-      font-family: 'Noto Sans SC', sans-serif;
-      letter-spacing: 1px;
+      margin-top: 10px;
+      border-top: 2px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
       padding: 5px 0;
-      margin: 12px -40px -12px;
-    }
-
-    /* ── 内容区 ── */
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 32px 40px 60px;
-    }
-
-    .archive-header {
-      border-bottom: 3px solid #1a1a1a;
-      padding-bottom: 12px;
-      margin-bottom: 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .archive-header h1 {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 4px;
-    }
-
-    .archive-header .count {
       font-size: 12px;
       font-family: 'Noto Sans SC', sans-serif;
-      color: #666;
+      letter-spacing: 2px;
+      color: #222;
     }
 
-    /* ── 期刊卡片 ── */
-    .issue-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+    /* ── 主版面 ── */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px;
     }
 
-    .issue-card {
-      background: #fff;
-      border: 1px solid #d4cec5;
-      border-top: 4px solid #1a1a1a;
-      text-decoration: none;
-      color: #1a1a1a;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow 0.15s, transform 0.15s;
-    }
+    /* ── 分割线 ── */
+    .divider { border: none; border-top: 1px solid #999; margin: 16px 0; }
+    .divider-thick { border: none; border-top: 3px double #1a1a1a; margin: 20px 0; }
 
-    .issue-card:hover {
-      box-shadow: 4px 4px 0 #1a1a1a;
-      transform: translate(-2px, -2px);
-    }
-
-    .issue-card.special {
-      border-top-color: #C41E3A;
-    }
-
-    .card-top {
-      padding: 14px 16px 10px;
-      border-bottom: 1px solid #e8e2d8;
-    }
-
-    .card-meta {
-      display: flex;
-      justify-content: space-between;
+    /* ── 栏目标题 ── */
+    .section-label {
+      font-family: 'Noto Sans SC', sans-serif;
       font-size: 10px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #888;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-
-    .card-issue-no {
       font-weight: 500;
-      color: #444;
-    }
-
-    .card-date {
-      color: #666;
-    }
-
-    .card-tag {
-      display: inline-block;
-      font-size: 9px;
-      font-family: 'Noto Sans SC', sans-serif;
-      padding: 2px 6px;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-
-    .card-tag.special {
-      background: #C41E3A;
+      letter-spacing: 4px;
+      text-transform: uppercase;
       color: #fff;
-    }
-
-    .card-tag.regular {
       background: #1a1a1a;
-      color: #fff;
+      display: inline-block;
+      padding: 2px 10px;
+      margin-bottom: 12px;
     }
 
-    .card-headline {
-      font-size: 15px;
+    .section-label.red { background: #c0392b; }
+    .section-label.blue { background: #1a3a6b; }
+    .section-label.green { background: #1a6b3a; }
+    .section-label.gold { background: #8b6914; }
+
+    /* ── 头版：三栏布局 ── */
+    .front-page {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 0;
+    }
+
+    .col { padding: 0 16px; }
+    .col:first-child { padding-left: 0; border-right: 1px solid #999; }
+    .col:last-child { padding-right: 0; border-left: 1px solid #999; }
+
+    /* ── 头条 ── */
+    .headline-main {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #0a0a0a;
+      margin-bottom: 10px;
+    }
+
+    .headline-sub {
+      font-size: 18px;
       font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.5px;
+      line-height: 1.3;
+      color: #1a1a1a;
+      margin-bottom: 8px;
     }
 
-    .card-body {
-      padding: 10px 16px 14px;
-      flex: 1;
-    }
-
-    .card-overline {
-      font-size: 10px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #C41E3A;
-      font-weight: 500;
-      letter-spacing: 1px;
+    .headline-minor {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
       margin-bottom: 6px;
     }
 
-    .card-summary {
-      font-size: 12px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #555;
+    .deck {
+      font-size: 13px;
+      font-weight: 400;
       line-height: 1.7;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
     }
 
-    .card-footer {
-      padding: 8px 16px;
-      border-top: 1px solid #e8e2d8;
-      font-size: 11px;
+    .byline {
+      font-size: 10px;
+      color: #777;
       font-family: 'Noto Sans SC', sans-serif;
-      color: #888;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    /* ── 大图占位 ── */
+    .photo-block {
+      background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+      color: #e0e0e0;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 12px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.02) 20px
+      );
+    }
+
+    .photo-block .photo-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-family: 'Noto Sans SC', sans-serif;
+      opacity: 0.7;
+    }
+
+    .photo-block .photo-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 8px;
+      line-height: 1.3;
+    }
+
+    .photo-caption {
+      font-size: 10px;
+      color: #666;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-style: italic;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* ── 数据框 ── */
+    .data-box {
+      border: 2px solid #1a1a1a;
+      padding: 12px 14px;
+      margin: 12px 0;
+    }
+
+    .data-box .box-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-family: 'Noto Sans SC', sans-serif;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .data-box .data-row {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      padding: 3px 0;
+      border-bottom: 1px dotted #ddd;
     }
 
-    .read-link {
+    .data-box .data-row .val {
+      font-weight: 700;
+      color: #c0392b;
+    }
+
+    .data-box .data-row .val.up::after { content: ' ▲'; font-size: 9px; }
+    .data-box .data-row .val.down { color: #27ae60; }
+    .data-box .data-row .val.down::after { content: ' ▼'; font-size: 9px; }
+
+    /* ── 引言块 ── */
+    .pullquote {
+      border-left: 4px solid #1a1a1a;
+      padding: 8px 12px;
+      margin: 12px 0;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .pullquote .attribution {
+      font-size: 10px;
+      font-style: normal;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* ── 第二版：两栏 ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .two-col .col { border-right: 1px solid #999; }
+    .two-col .col:last-child { border-right: none; border-left: none; }
+
+    /* ── 第三版：四栏简讯 ── */
+    .four-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .four-col .col {
+      border-right: 1px solid #bbb;
+      padding: 0 14px;
+    }
+
+    .four-col .col:first-child { padding-left: 0; }
+    .four-col .col:last-child { border-right: none; }
+
+    .brief-item {
+      padding: 8px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    .brief-item:last-child { border-bottom: none; }
+
+    .brief-title {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 3px;
+    }
+
+    .brief-text {
+      font-size: 11px;
+      color: #444;
+      line-height: 1.5;
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    /* ── AI专栏 ── */
+    .ai-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      margin: 10px 0;
+    }
+
+    .ai-table th {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 5px 8px;
+      text-align: left;
       font-weight: 500;
-      color: #1a1a1a;
       letter-spacing: 1px;
     }
 
-    /* ── 年份分隔 ── */
-    .year-divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 32px 0 16px;
-      font-size: 12px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #888;
-      letter-spacing: 2px;
+    .ai-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
     }
 
-    .year-divider::before, .year-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #ccc;
+    .ai-table tr:nth-child(even) td { background: #f9f6f0; }
+
+    /* ── 广告/声明框 ── */
+    .notice-box {
+      border: 1px solid #999;
+      padding: 10px 14px;
+      margin: 12px 0;
+      text-align: center;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #555;
+      line-height: 1.6;
     }
 
     /* ── 页脚 ── */
     .footer {
+      background: #1a1a1a;
+      color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 14px;
       font-size: 10px;
       font-family: 'Noto Sans SC', sans-serif;
-      color: #aaa;
-      border-top: 1px solid #d4cec5;
-      margin-top: 40px;
+      letter-spacing: 2px;
+      margin-top: 30px;
+    }
+
+    /* ── 破图大字 ── */
+    .overline {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #c0392b;
+      font-family: 'Noto Sans SC', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .kicker {
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 500;
+      color: #888;
       letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 0.85;
+      margin: 4px 6px 0 0;
+      color: #1a1a1a;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { max-width: 100%; padding: 10px; }
+    }
+
+    /* ── 返回目录导航 ── */
+    .back-nav {
+      background: #1a1a1a;
+      padding: 6px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .back-nav a {
+      color: #f5f0e8;
+      text-decoration: none;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+
+    .back-nav a:hover { opacity: 1; }
+
+    .back-nav .sep {
+      color: #666;
+      font-size: 11px;
     }
 
     @media (max-width: 768px) {
+      .back-nav { padding: 6px 14px; }
+      /* 报头 */
       .masthead { padding: 12px 16px 10px; }
       .masthead-top { flex-direction: column; align-items: center; gap: 4px; }
       .masthead-top .left, .masthead-top .right { width: auto; text-align: center; }
       .paper-name { font-size: 26px; letter-spacing: 2px; }
       .paper-subtitle { font-size: 11px; letter-spacing: 2px; }
-      .masthead-banner { margin: 12px -16px -12px; }
-      .page { padding: 20px 16px 40px; }
-      .issue-grid { grid-template-columns: 1fr; }
+
+      /* 主版面 */
+      .page { padding: 12px 14px; }
+
+      /* 三栏 → 单栏 */
+      .front-page { grid-template-columns: 1fr; }
+      .col { padding: 0; border: none !important; }
+      .col + .col { border-top: 1px solid #999 !important; padding-top: 16px; margin-top: 16px; }
+
+      /* 标题字号 */
+      .headline-main { font-size: 24px; }
+      .headline-sub { font-size: 16px; }
+
+      /* 二栏 → 单栏 */
+      .two-col { grid-template-columns: 1fr !important; }
+
+      /* 四栏数字格 → 二栏 */
+      .four-col { grid-template-columns: 1fr 1fr !important; }
+
+      /* 编辑总结（inline style 区域）→ 单栏 */
+      .editorial-grid { grid-template-columns: 1fr !important; }
+      .editorial-grid > div { border: none !important; padding: 0 !important; }
+      .editorial-grid > div + div { border-top: 1px solid #999 !important; padding-top: 16px !important; margin-top: 16px !important; }
+
+      /* 页脚 */
+      .footer { font-size: 9px; padding: 8px 14px; }
     }
 
     /* ── 二维码弹窗 ── */
@@ -304,6 +495,13 @@
 </script>
 
 
+<!-- ══════════ 返回目录 ══════════ -->
+<div class="back-nav">
+  <a href="./index.html">← 所有期刊</a>
+  <span class="sep">|</span>
+  <a href="./index.html">苹果酱全球摘要 档案室</a>
+</div>
+
 <!-- ══════════ 报头 ══════════ -->
 <div class="masthead">
   <div class="masthead-top">
@@ -313,167 +511,365 @@
     </div>
     <div>
       <div class="paper-name">苹 果 酱 全 球 摘 要</div>
-      <div class="paper-subtitle">APPLE JAM DAILY · 全球视野  理性思考</div>
+      <div class="paper-subtitle">APPLE JAM DAILY · FOUNDED 1980 · 全球视野  理性思考</div>
     </div>
     <div class="right">
-      档案室<br>
-      所有已发行期刊<br>
-      <strong>按日期倒序排列</strong>
+      2026年4月3日 星期五<br>
+      农历丙午年·三月初五<br>
+      <strong></strong>
     </div>
   </div>
   <div class="masthead-banner">
-    每日更新 · AI辅助采编 · 滚动追踪最近30天 &nbsp;&nbsp;|&nbsp;&nbsp; 拒绝算法投喂，只读值得读的新闻 &nbsp;&nbsp;|&nbsp;&nbsp; 免费订阅，每日直达你的收件箱
+    每日更新 · AI辅助采编 · 滚动追踪最近30天   |   拒绝算法投喂，只读值得读的新闻   |   免费订阅，每日直达你的收件箱
+  </div>
   </div>
 </div>
 
-<!-- ══════════ 目录内容 ══════════ -->
+<!-- ══════════ 头版 ══════════ -->
 <div class="page">
 
-  <div class="archive-header">
-    <h1>期 刊 目 录</h1>
-    <span class="count">共 5 期 · 持续更新中</span>
-  </div>
+  <div class="front-page">
 
-  
-  
-    
-    
+    <!-- 左栏 -->
+    <div class="col">
+      <div class="section-label red">要闻速览</div>
       
-  <div class="year-divider">2026年</div>
-  <div class="issue-grid">
-    
+      <div class="headline-minor">布伦特原油现货突破140美元</div>
+      <div class="deck">全球最重要的现货原油价格——布伦特原油现货周三突破140美元/桶，为2008年金融危机以来首次，触发市场对全球通胀再次抬头的担忧。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">美国柴油价格首破200美元</div>
+      <div class="deck">美国柴油零售价格首次突破200美元/桶，加剧物流运输成本压力，美国卡车运输业面临严峻挑战。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">二手车市场火爆</div>
+      <div class="deck">美国二手车需求本周激增40%，其中电动车需求涨幅最为明显，消费者正在寻找应对高油价的替代方案。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">鲁比奥访问沙特推动组建抗伊联盟</div>
+      <div class="deck">美国国务卿鲁比奥周三抵达利雅得，计划推动海湾国家组建更广泛的抗伊联盟，伊朗战争走向面临关键节点。</div>
+      <hr class="divider">
+      
+      <div class="data-box">
+        <div class="box-title">原油价格指数</div>
+        
+        <div class="data-row"><span>布伦特原油现货</span><span class="val up">$140</span></div>
+        
+        <div class="data-row"><span>布伦特原油期货</span><span class="val up">$110</span></div>
+        
+        <div class="data-row"><span>WTI美油</span><span class="val up">$105</span></div>
+        
+        <div class="data-row"><span>美国汽油均价/加仑</span><span class="val up">$4.08</span></div>
+        
+        <div class="data-row"><span>美国柴油均价/加仑</span><span class="val up">$200</span></div>
+        
+      </div>
+      <div class="notice-box">
+        「布伦特原油现货价格突破140美元，为2008年以来首次。」<br>—— 华尔街见闻，2026年4月3日
+      </div>
+    </div>
 
-    <!-- 2026-04-03 -->
-    <a class="issue-card" href="./2026-04-03.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3034 期</span>
-          <span class="card-date">2026年4月3日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">布伦特原油现货飙升至140美元<br>美银警告：百元油价可能贯穿全年</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">油价突破百元大关</div>
-        <div class="card-summary">布伦特原油现货突破140美元，为2008年以来首次，伊朗战争持续推高霍尔木兹海峡风险溢价；对冲基金一月亏损超千亿美元，美银警告百元油价贯穿全年或使美联储降息预期落空；微软宣布未来四年在日本投资100亿美元，一口气发布三个基础模型，AI竞争白热化。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+    <!-- 中栏：头条 -->
+    <div class="col">
+      <div class="overline">油价突破百元大关</div>
+      <div class="headline-main">布伦特原油现货飙升至140美元<br>美银警告：百元油价可能贯穿全年</div>
+      <div class="kicker">4月3日 · 全球通胀压力骤增</div>
 
-    
-  
-    
-    
+      <div class="photo-block" style="height:160px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <div class="photo-label">[ 战区示意图 ]</div>
+        <div class="photo-title">原油期货交易</div>
+        <div style="font-size:11px; opacity:0.6; margin-top:6px; font-family:'Noto Sans SC',sans-serif;">全球能源市场因伊朗战争持续陷入供应危机</div>
+      </div>
 
-    <!-- 2026-04-02 -->
-    <a class="issue-card" href="./2026-04-02.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3033 期</span>
-          <span class="card-date">2026年4月2日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">伊朗总统请求停火<br>特朗普开价霍尔木兹海峡</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">美伊停战出现突破信号</div>
-        <div class="card-summary">布伦特原油跌超2%至98美元，纳指涨超1%，黄金日内涨幅2%。以色列继续对黎巴嫩施压，IEA警告原油供应缺口恶化。Meta代码审查准确率达93%，Slack宣布史上最大AI更新。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      
+      <p class="deck drop-cap">
+        全球能源市场迎来历史性时刻。布伦特原油现货价格周三飙升至140美元/桶上方，为2008年以来首次突破百元大关。美国银行发出严厉警告：如果油价维持在当前水平，全年平均价格可能达到100美元，这将使美联储降息计划彻底泡汤。
+      </p>
+      
+      <p class="deck">
+        受油价飙升影响，美国柴油价格突破200美元/桶，汽油均价亦大幅攀升。消费者转向二手车市场寻找解决方案，美国二手车销量本周暴涨40%，其中电动车需求增幅最为显著。
+      </p>
+      
+      <p class="deck">
+        伊朗与阿曼正在起草协议，设立联合机制监控霍尔木兹海峡交通。美国国务卿鲁比奥周三抵达沙特，意图推动海湾国家组建抗伊联盟。地缘风险持续升温，全球供应链面临严峻考验。
+      </p>
+      
 
-    
-  
-    
-    
+      <div class="pullquote">
+        "百元油价可能贯穿全年。"
+        <div class="attribution">—— 美国银行，2026年4月2日</div>
+      </div>
 
-    <!-- 2026-04-01 -->
-    <a class="issue-card special" href="./2026-04-01.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3031 期</span>
-          <span class="card-date">2026年4月1日</span>
-        </div>
-        <div class="card-tag special">停战信号 · 市场急涨特别报道</div>
-        <div class="card-headline">布油跌破$100 黄金升破$4700<br>特朗普称两三周内结束战事<br>全球股债齐涨</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">4月6日截止期前夜 · 美伊同步释放信号</div>
-        <div class="card-summary">伊朗称海峡会开放但不对美国，以色列当日仍宣布打击计划。OpenAI完成融资估值$852B，韩国半导体出口同比+151%。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      <div class="byline">本报国际组 · 纽约/伦敦/华盛顿 综合报道</div>
+    </div>
 
-    
-  
-    
-    
+    <!-- 右栏 -->
+    <div class="col">
+      <div class="section-label blue">科技前沿</div>
 
-    <!-- 2026-03-31 -->
-    <a class="issue-card special" href="./2026-03-31.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3030 期</span>
-          <span class="card-date">2026年3月31日</span>
-        </div>
-        <div class="card-tag special">战争第31天 · 特别报道</div>
-        <div class="card-headline">伊朗拒绝15点和谈方案<br>焚毁科威特油轮<br>美军大规模增兵逼近</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">4月6日截止期迫近 · 距今仅剩6天</div>
-        <div class="card-summary">外交陷入僵局，特朗普称「不在乎是否达成协议」。亚马逊$500亿押注OpenAI，黄金遭遇2008年来最差单月表现。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      <div class="headline-sub">微软宣布千亿美元AI投资计划</div>
+      <div class="deck">微软宣布未来四年将在日本投资100亿美元，与日本企业合作开发AI基础设施，并推出三个新的基础模型，剑指OpenAI和Anthropic。</div>
 
-    
-  
-    
-    
+      <table class="ai-table">
+        <tr><th>模型</th><th>发布方</th><th>亮点</th></tr>
+        
+        <tr>
+          <td><strong>Trinity-Large-Thinking</strong></td>
+          <td>Arcee</td>
+          <td>美国首款可定制开源大模型</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Music Gen</strong></td>
+          <td>ElevenLabs</td>
+          <td>AI音乐生成应用发布</td>
+        </tr>
+        
+        <tr>
+          <td><strong>基础模型</strong></td>
+          <td>Microsoft</td>
+          <td>一口气发布三个</td>
+        </tr>
+        
+        <tr>
+          <td><strong>AI Agent</strong></td>
+          <td>Cursor</td>
+          <td>挑战Claude Code</td>
+        </tr>
+        
+      </table>
 
-    <!-- 2026-03 -->
-    <a class="issue-card" href="./2026-03.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3029 期</span>
-          <span class="card-date">2026年3月</span>
-        </div>
-        <div class="card-tag regular">2026年3月号</div>
-        <div class="card-headline">美以联合空袭伊朗<br>哈梅内伊身亡<br>霍尔木兹封锁</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">战争爆发 · 中东巨变</div>
-        <div class="card-summary">霍尔木兹海峡封锁，油价飙升至$120。OpenClaw发布引发AI商品化讨论，中国两会落幕，欧洲防务重整。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      <hr class="divider">
 
+      
+      <div class="headline-minor">微软千亿美元布局日本AI</div>
+      <div class="deck">微软宣布未来四年在日本投资100亿美元，与软银、NEC等日企合作开发AI基础设施，这是微软在亚洲最大规模的投资计划。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">Arcee发布美国首款可定制开源大模型</div>
+      <div class="deck">Arcee发布Trinity-Large-Thinking，这是罕见的美国制造、可企业下载定制的大模型，打破开源模型被欧洲主导的局面。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">ElevenLabs推出AI音乐生成应用</div>
+      <div class="deck">ElevenLabs发布全新AI音乐生成应用，用户可通过文本描述生成完整音乐作品，音乐创作门槛大幅降低。</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">Cursor挑战Claude Code</div>
+      <div class="deck">Anthropic旗下编程助手Cursor推出全新AI Agent体验，直接对标Claude Code和OpenAI Codex，编程辅助市场竞争白热化。</div>
+      <hr class="divider">
+      
+
+      <div class="data-box" style="margin-top:12px;">
+        <div class="box-title">科技资本动向</div>
+        
+        <div class="data-row"><span>微软日本AI投资</span><span class="val up">100亿美元</span></div>
+        
+        <div class="data-row"><span>Trinity-LT参数规模</span><span class="val up">700亿</span></div>
+        
+        <div class="data-row"><span>ElevenLabs用户数</span><span class="val up">800万</span></div>
+        
+        <div class="data-row"><span>Cursor代码补全准确率</span><span class="val up">92%</span></div>
+        
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 第二版：经济 + 地区冲突 ══════════ -->
+  <div class="two-col">
+    <div class="col">
+      <div class="section-label gold">经济·能源</div>
+      <div class="headline-sub">百元油价冲击全球市场<br>对冲基金一个月亏损超千亿美元</div>
+      
+      <div class="deck">油价突破百元大关触发全球市场剧烈波动。标准普尔500指数周三收盘微跌0.3%，能源板块逆势上涨3.2%。对冲基金因伊朗战争持续一个月已亏损超千亿美元，创2020年新冠疫情以来最差表现。</div>
+      
+      <div class="deck">美国银行策略师警告，油价维持在100美元上方将导致美联储全年降息预期落空。美联储古尔斯比周三表示，如果油价上涨持续较长时间，将不可避免地传导至食品价格和制造业成本。</div>
+      
+      <div class="deck">亚洲市场方面，日本央行前行长黑田东彦警告，日元大幅贬值正在侵蚀家庭购买力。欧洲央行管委一致认为当前不应降息，需等待通胀明确回落信号。</div>
+      
+      <div class="byline">本报经济组 · 纽约/伦敦</div>
+      <div class="data-box">
+        <div class="box-title">全球航运压力指数</div>
+        
+        <div class="data-row"><span>波斯湾保险状态</span><span class="val up">高度风险</span></div>
+        
+        <div class="data-row"><span>绕行好望角运费溢价</span><span class="val up">+60%</span></div>
+        
+        <div class="data-row"><span>全球航运积压（TEU）</span><span class="val up">220万</span></div>
+        
+        <div class="data-row"><span>霍尔木兹海峡状态</span><span class="val up">风险升级</span></div>
+        
+      </div>
+      <div class="pullquote">
+        "油价维持在100美元上方将导致美联储全年降息预期落空。"
+        <div class="attribution">—— 美国银行，2026年4月2日</div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="section-label red">地区冲突</div>
+      <div class="headline-sub">布伦特原油现货首破140美元</div>
+      <div class="deck">全球原油基准价格周三飙升至140美元上方，为2008年以来首次。美国银行警告百元油价可能贯穿全年，对冲基金一个月亏损超千亿美元。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">布伦特原油现货突破140美元</div>
+      <div class="deck">全球最重要的现货原油价格——布伦特原油现货周三突破140美元/桶，为2008年以来首次突破百元大关，触发市场对全球通胀再次抬头的担忧。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">美国柴油价格首破200美元</div>
+      <div class="deck">美国柴油零售价格首次突破200美元/桶，加剧物流运输成本压力，美国卡车运输业面临严峻挑战。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">美银警告：百元油价贯穿全年</div>
+      <div class="deck">美国银行发出严厉警告，如果油价维持在当前水平，全年平均价格可能达到100美元，这将使美联储降息计划彻底泡汤。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">对冲基金一月亏损超千亿美元</div>
+      <div class="deck">彭博社报道，对冲基金因伊朗战争持续一个月已亏损超千亿美元，创2020年新冠疫情以来最差表现，金融机构正在重新评估地缘风险敞口。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">伊朗与阿曼起草海峡监控协议</div>
+      <div class="deck">伊朗与阿曼正在起草协议，设立联合机制监控霍尔木兹海峡交通，为可能的地缘缓和创造条件。</div>
+      
+    </div>
+  </div>
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 第三版：简讯四栏 ══════════ -->
+  <div style="margin-bottom:8px;">
+    <span class="section-label">国际简讯</span>
+  </div>
+  <div class="four-col">
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">韩国导演遭围殴致死引众怒</div>
+        <div class="brief-text">韩国40岁导演在首尔遭围殴致死，嫌疑人已被逮捕，案件引发韩国社会对暴力犯罪的广泛讨论，微博话题热度破百万。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">贵州书记闭幕致辞走红</div>
+        <div class="brief-text">贵州一位县党委书记在县两会闭幕式上的致辞视频走红网络，因其务实亲民的风格获网民点赞，转发量破十万。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">多城实施公积金新政</div>
+        <div class="brief-text">多地住房公积金缴存基数上调政策落地，覆盖数千万职工，微博热搜第一，公积金账户可支配金额显著增加。</div>
+      </div>
+      
+    </div>
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">张天爱发文回应变样争议</div>
+        <div class="brief-text">演员张天爱在社交媒体发文回应外界对其容貌变化的质疑，表示"做真实的自己最重要"，引发粉丝热议。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">特斯拉再度产销失衡</div>
+        <div class="brief-text">特斯拉最新交付数据显示，一季度产销比再次失衡，库存积压增加，股价盘后下跌超3%。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">OpenAI收购TBPN</div>
+        <div class="brief-text">OpenAI宣布收购科技播客TBPN，旨在改善公司公关形象，在AI监管舆论战中寻求更有利的话语权。</div>
+      </div>
+      
+    </div>
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">OECD：通胀或高于Fed预期</div>
+        <div class="brief-text">经济合作与发展组织（OECD）发布报告，预测今年美国通胀可能高于美联储预期，全球货币政策前景复杂。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">美联储官员：利率将维持较长时间</div>
+        <div class="brief-text">美联储官员古尔斯比表示，如果油价上涨持续较长时间，将体现在食品和制造业价格上，暗示降息需更谨慎。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">欧洲国债价格显著上涨</div>
+        <div class="brief-text">因油价下跌缓解欧元区通胀压力，英国和德国国债价格周三显著上涨，市场对欧央行降息预期有所升温。</div>
+      </div>
+      
+    </div>
+    
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">美股能源板块逆势上涨</div>
+        <div class="brief-text">地缘风险缓解后黄金从日内高点回落，但仍维持在1950美元/盎司上方，投资者保持谨慎。</div>
+      </div>
+      
+    </div>
     
   </div>
-    
-  
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 编辑总结 ══════════ -->
+  <div class="editorial-grid" style="display:grid; grid-template-columns: 2fr 1fr; gap:0;">
+    <div style="padding-right:24px; border-right:1px solid #999;">
+      <span class="section-label green">本月总评</span>
+      <div class="headline-sub" style="margin-top:8px;">百元油价时代的生存法则</div>
+      
+      <p class="deck drop-cap">布伦特原油现货突破140美元，标志着全球能源市场正式进入"百元油价时代"。这不是偶然的波动，而是地缘政治深度重塑全球供应链的必然结果。伊朗战争的持续时间远超市场预期，霍尔木兹海峡的航运风险溢价已经固化在价格中。</p>
+      
+      <p class="deck">美国银行的警告值得警惕：百元油价可能贯穿全年。这意味着美联储2026年降息预期基本泡汤，全球货币政策正常化进程将被推迟。对冲基金一个月亏损超千亿美元，说明华尔街已经为这场持久战付出了血的代价。</p>
+      
+      <p class="deck">苹果酱日报认为，投资者需要重新校准风险模型。电动车和二手车的需求暴涨只是开始，能源成本向制造业和消费端的传导才刚刚开始。在这场没有赢家的博弈中，唯一确定的是：全球通胀卷土重来已成定局。</p>
+      
+      <div class="byline">—— 苹果酱日报编辑部</div>
+    </div>
+
+    <div style="padding-left:24px;">
+      <span class="section-label">本月关键数字</span>
+      <div class="data-box" style="margin-top:10px; border:none; padding:0;">
+        
+        <div class="data-row"><span>布伦特原油现货</span><span class="val up">$140</span></div>
+        
+        <div class="data-row"><span>美国柴油均价</span><span class="val up">$200</span></div>
+        
+        <div class="data-row"><span>美国汽油均价/加仑</span><span class="val up">$4.08</span></div>
+        
+        <div class="data-row"><span>对冲基金月度亏损</span><span class="val down">超1000亿美元</span></div>
+        
+        <div class="data-row"><span>微软日本AI投资</span><span class="val up">100亿美元</span></div>
+        
+        <div class="data-row"><span>微软基础模型数</span><span class="val up">3个</span></div>
+        
+        <div class="data-row"><span>ElevenLabs用户数</span><span class="val up">800万</span></div>
+        
+        <div class="data-row"><span>美国二手车需求增幅</span><span class="val up">+40%</span></div>
+        
+      </div>
+      <div class="notice-box" style="margin-top:16px; border:2px solid #1a1a1a;">
+        <strong>下期预告</strong><br><br>
+        
+        美伊停火谈判能否在霍尔木兹海峡问题上达成妥协<br>
+        
+        美联储是否会因油价飙升重启加息周期<br>
+        
+        霍尔木兹海峡联合监控机制能否有效降低航运风险<br>
+        
+        欧洲央行是否会在通胀压力下推迟降息<br>
+        
+      </div>
+    </div>
+  </div>
 
 </div>
+
 
 <!-- ══════════ 页脚 ══════════ -->
 <div class="footer">
-  苹果酱全球摘要 APPLE JAM DAILY · FOUNDED 1980 · 全球视野 理性思考<br>
-  AI辅助采编 · 免费订阅 · 每日发行
+  苹果酱全球摘要 APPLE JAM DAILY &nbsp;·&nbsp; 2026年4月3日 &nbsp;·&nbsp; 地缘聚焦版 · 每日快报第3034期 &nbsp;·&nbsp; 数据来源：Wikipedia / CNBC / Al Jazeera / WEF / S&P Global / BuildFastWithAI &nbsp;·&nbsp; AI 辅助编辑整理
 </div>
 
 </body>
