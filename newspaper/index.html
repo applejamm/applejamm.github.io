@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>苹果酱全球摘要 · 期刊目录</title>
+  <link rel="alternate" type="application/rss+xml" title="苹果酱全球摘要 RSS" href="https://applejamm.github.io/newspaper/rss.xml">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap');
 
@@ -42,6 +43,23 @@
     }
 
     .masthead-top .right { text-align: right; }
+
+    .rss-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      padding: 4px 10px;
+      background: #f26522;
+      color: #fff;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+    .rss-btn:hover { background: #d4551a; }
 
     .paper-name {
       font-size: 72px;
@@ -318,7 +336,11 @@
     <div class="right">
       档案室<br>
       所有已发行期刊<br>
-      <strong>按日期倒序排列</strong>
+      <strong>按日期倒序排列</strong><br>
+      <a class="rss-btn" href="https://applejamm.github.io/newspaper/rss.xml">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="19" r="3"/><path d="M4 4a16 16 0 0 1 16 16h-3A13 13 0 0 0 4 7zm0 6a10 10 0 0 1 10 10H11A7 7 0 0 0 4 13z"/></svg>
+        RSS 订阅
+      </a>
     </div>
   </div>
   <div class="masthead-banner">
