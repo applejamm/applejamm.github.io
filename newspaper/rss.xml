@@ -6,35 +6,33 @@
     <atom:link href="https://applejamm.github.io/newspaper/rss.xml" rel="self" type="application/rss+xml"/>
     <description>每日全球资讯摘要 · AI辅助采编 · 地缘·科技·经济</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 05 Apr 2026 09:51:29 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 10:21:42 +0800</lastBuildDate>
     <ttl>360</ttl>
   <item>
     <title>2026年4月5日 · 第3038期 · 美军F-15E战斗机被伊朗击落霍尔木兹海峡局势骤然紧张</title>
     <link>https://applejamm.github.io/newspaper/2026-04-05.html</link>
     <guid isPermaLink="true">https://applejamm.github.io/newspaper/2026-04-05.html</guid>
     <pubDate>Sun, 05 Apr 2026 08:00:00 +0800</pubDate>
-    <description><![CDATA[<h2>美军F-15E战斗机被伊朗击落霍尔木兹海峡局势骤然紧张</h2>
-<p><em>伊朗战争重大升级</em></p>
-<p>中东局势急剧恶化。美国国防部证实，一架F-15E「攻击鹰」战斗轰炸机于4月3日在伊朗边境附近被伊朗防空部队击落，飞行员生死未卜。这是伊朗战争爆发以来美军最重大的装备损失，标志着冲突进入新阶段。</p>
-<p>伊朗与阿曼正在起草协议，设立联合机制监控霍尔木兹海峡交通。美国国务卿鲁比奥周五紧急访问利雅得，意图推动海湾国家组建更广泛的抗伊联盟。全球能源市场对霍尔木兹海峡断航的担忧持续升温。</p>
+    <description><![CDATA[<h2>科威特石油总部遭无人机袭击起火霍尔木兹海峡首次有船只通过</h2>
+<p><em>中东冲突急剧升级</em></p>
+<p>中东冲突进一步升级。科威特石油公司（KPC）总部周六遭到伊朗无人机袭击起火，这是海湾地区能源设施最新遭到的攻击。同日，法国和日本船只首次通过霍尔木兹海峡，显示局势存在缓和空间但风险仍在急剧上升。</p>
+<p>美国总统特朗普周六发出严厉警告，称伊朗还有「48小时」时间，否则「所有地狱将倾泻而下」。与此同时，搜救人员继续寻找失踪机组人员，伊朗与阿曼正在起草海峡监控协议。</p>
 <h3>🌍 地缘</h3><ul>
-<li><strong>美军F-15E被伊朗击落</strong>：美国F-15E「攻击鹰」战斗轰炸机在伊朗边境附近被击落，这是伊朗战争爆发以来美军最重大的装备损失，五角大楼拒绝透露飞行员命运。…</li>
-<li><strong>美军两架黑鹰直升机遭击中</strong>：美军两架黑鹰直升机被伊朗击中，具体伤亡情况待核实，中东冲突进一步升级，引发市场对局势恶化的担忧。…</li>
-<li><strong>伊朗与阿曼起草海峡监控协议</strong>：伊朗与阿曼正在起草协议，设立联合机制监控霍尔木兹海峡交通，为可能的地缘缓和创造条件，但实质性突破仍待观察。…</li>
+<li><strong>乌克兰袭击俄罗斯氮肥工厂</strong>：乌克兰表示袭击了俄罗斯陶里亚蒂的氮肥工厂，这是俄乌冲突的最新进展，双方继续互相发动攻击。…</li>
+<li><strong>伊朗战争冲击能源以外大宗商品</strong>：伊朗战争正在冲击石油以外的全球大宗商品市场，从天然气到金属供应链均受影响。…</li>
+<li><strong>全球通胀可能进一步上升</strong>：经济学家分析，伊朗冲突导致的能源价格飙升可能推动全球通胀进一步上升，各国央行面临更大压力。…</li>
 </ul>
 <h3>💡 科技</h3><ul>
 <li><strong>微软一次发布3款AI模型</strong>：微软在AI领域发起猛烈攻势，一口气发布三个基础模型，直接对标OpenAI的GPT系列和Google的Gemini系列，体现了微软在AI基础模型领域的雄心。…</li>
 <li><strong>Arcee发布美国首款可定制开源大模型</strong>：Arcee发布Trinity-Large-Thinking，这是罕见的美国制造、可企业下载定制的大模型，打破开源模型被欧洲主导的局面。…</li>
-<li><strong>Meta暂停与Mercor合作</strong>：Meta因数据泄露事件暂停与AI训练数据供应商Mercor的合作，该 breach可能暴露AI行业机密，AI数据供应链安全问题引发关注。…</li>
+<li><strong>Karpathy发布LLM知识库新架构</strong>：前OpenAI工程师Karpathy发布新型LLM知识库架构，使用AI维护的markdown库替代RAG，引发业内热议。…</li>
 </ul>
-<h3>💰 经济</h3>
-<p>油价突破百元大关触发全球市场剧烈波动。标准普尔500指数周四收盘微跌，能源板块逆势上涨。对冲基金因伊朗战争持续已亏损超千亿美元，创2020年新冠疫情以来最差表现。…</p>
 <h3>📊 关键数字</h3><ul>
-<li>布伦特原油期货：<strong>$110</strong></li>
-<li>WTI美油：<strong>$105</strong></li>
-<li>美国柴油均价：<strong>$200</strong></li>
-<li>对冲基金月度亏损：<strong>超1000亿美元</strong></li>
-<li>微软日本AI投资：<strong>100亿美元</strong></li>
+<li>布伦特原油：<strong>$110</strong></li>
+<li>科威特KPC总部：<strong>遭无人机袭击</strong></li>
+<li>霍尔木兹通航船只：<strong>首次有船通过</strong></li>
+<li>特朗普警告窗口期：<strong>48小时</strong></li>
+<li>微软AI模型发布数：<strong>3款</strong></li>
 </ul>
 <p><a href="https://applejamm.github.io/newspaper/2026-04-05.html">阅读完整报纸 →</a></p>]]></description>
   </item>
