@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>苹果酱日报 · 期刊目录</title>
+  <title>特朗普暂停霍尔木兹护航 油价应声下跌 股市却创新高 — 苹果酱日报 2026年5月6日</title>
   <link rel="alternate" type="application/rss+xml" title="苹果酱日报 RSS" href="https://applejamm.github.io/newspaper/rss.xml">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=UnifrakturMaguntia&display=swap');
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -14,7 +14,6 @@
       background: #f5f0e8;
       color: #1a1a1a;
       font-family: 'Noto Serif SC', serif;
-      min-height: 100vh;
     }
 
     /* ── 报头 ── */
@@ -81,198 +80,405 @@
     }
 
     .masthead-banner {
-      background: #1a1a1a;
-      color: #f5f0e8;
-      font-size: 11px;
-      font-family: 'Noto Sans SC', sans-serif;
-      letter-spacing: 1px;
+      margin-top: 10px;
+      border-top: 2px solid #1a1a1a;
+      border-bottom: 2px solid #1a1a1a;
       padding: 5px 0;
-      margin: 12px -40px -12px;
-    }
-
-    /* ── 内容区 ── */
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 32px 40px 60px;
-    }
-
-    .archive-header {
-      border-bottom: 3px solid #1a1a1a;
-      padding-bottom: 12px;
-      margin-bottom: 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .archive-header h1 {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 4px;
-    }
-
-    .archive-header .count {
       font-size: 12px;
       font-family: 'Noto Sans SC', sans-serif;
-      color: #666;
+      letter-spacing: 2px;
+      color: #222;
     }
 
-    /* ── 期刊卡片 ── */
-    .issue-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+    /* ── 主版面 ── */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px;
     }
 
-    .issue-card {
-      background: #fff;
-      border: 1px solid #d4cec5;
-      border-top: 4px solid #1a1a1a;
-      text-decoration: none;
-      color: #1a1a1a;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow 0.15s, transform 0.15s;
-    }
+    /* ── 分割线 ── */
+    .divider { border: none; border-top: 1px solid #999; margin: 16px 0; }
+    .divider-thick { border: none; border-top: 3px double #1a1a1a; margin: 20px 0; }
 
-    .issue-card:hover {
-      box-shadow: 4px 4px 0 #1a1a1a;
-      transform: translate(-2px, -2px);
-    }
-
-    .issue-card.special {
-      border-top-color: #C41E3A;
-    }
-
-    .card-top {
-      padding: 14px 16px 10px;
-      border-bottom: 1px solid #e8e2d8;
-    }
-
-    .card-meta {
-      display: flex;
-      justify-content: space-between;
+    /* ── 栏目标题 ── */
+    .section-label {
+      font-family: 'Noto Sans SC', sans-serif;
       font-size: 10px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #888;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-
-    .card-issue-no {
       font-weight: 500;
-      color: #444;
-    }
-
-    .card-date {
-      color: #666;
-    }
-
-    .card-tag {
-      display: inline-block;
-      font-size: 9px;
-      font-family: 'Noto Sans SC', sans-serif;
-      padding: 2px 6px;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-    }
-
-    .card-tag.special {
-      background: #C41E3A;
+      letter-spacing: 4px;
+      text-transform: uppercase;
       color: #fff;
-    }
-
-    .card-tag.regular {
       background: #1a1a1a;
-      color: #fff;
+      display: inline-block;
+      padding: 2px 10px;
+      margin-bottom: 12px;
     }
 
-    .card-headline {
-      font-size: 15px;
+    .section-label.red { background: #c0392b; }
+    .section-label.blue { background: #1a3a6b; }
+    .section-label.green { background: #1a6b3a; }
+    .section-label.gold { background: #8b6914; }
+
+    /* ── 头版：三栏布局 ── */
+    .front-page {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 0;
+    }
+
+    .col { padding: 0 16px; }
+    .col:first-child { padding-left: 0; border-right: 1px solid #999; }
+    .col:last-child { padding-right: 0; border-left: 1px solid #999; }
+
+    /* ── 头条 ── */
+    .headline-main {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #0a0a0a;
+      margin-bottom: 10px;
+    }
+
+    .headline-sub {
+      font-size: 18px;
       font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.5px;
+      line-height: 1.3;
+      color: #1a1a1a;
+      margin-bottom: 8px;
     }
 
-    .card-body {
-      padding: 10px 16px 14px;
-      flex: 1;
-    }
-
-    .card-overline {
-      font-size: 10px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #C41E3A;
-      font-weight: 500;
-      letter-spacing: 1px;
+    .headline-minor {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
       margin-bottom: 6px;
     }
 
-    .card-summary {
-      font-size: 12px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #555;
+    .deck {
+      font-size: 13px;
+      font-weight: 400;
       line-height: 1.7;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: 'Noto Sans SC', sans-serif;
     }
 
-    .card-footer {
-      padding: 8px 16px;
-      border-top: 1px solid #e8e2d8;
-      font-size: 11px;
+    .source-credit {
+      font-size: 10px;
+      color: #999;
       font-family: 'Noto Sans SC', sans-serif;
-      color: #888;
+      margin-top: -6px;
+      margin-bottom: 8px;
+      letter-spacing: 0;
+    }
+    .source-credit a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px dotted #ccc;
+    }
+    .source-credit a:hover { color: #444; border-bottom-color: #888; }
+
+    .byline {
+      font-size: 10px;
+      color: #777;
+      font-family: 'Noto Sans SC', sans-serif;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    /* ── 大图占位 ── */
+    .photo-block {
+      background: linear-gradient(135deg, #2c2c2c 0%, #4a4a4a 100%);
+      color: #e0e0e0;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 12px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.02) 20px
+      );
+    }
+
+    .photo-block .photo-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-family: 'Noto Sans SC', sans-serif;
+      opacity: 0.7;
+    }
+
+    .photo-block .photo-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 8px;
+      line-height: 1.3;
+    }
+
+    .photo-caption {
+      font-size: 10px;
+      color: #666;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-style: italic;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /* ── 数据框 ── */
+    .data-box {
+      border: 2px solid #1a1a1a;
+      padding: 12px 14px;
+      margin: 12px 0;
+    }
+
+    .data-box .box-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-family: 'Noto Sans SC', sans-serif;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .data-box .data-row {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      font-size: 12px;
+      font-family: 'Noto Sans SC', sans-serif;
+      padding: 3px 0;
+      border-bottom: 1px dotted #ddd;
     }
 
-    .read-link {
+    .data-box .data-row .val {
+      font-weight: 700;
+      color: #c0392b;
+    }
+
+    .data-box .data-row .val.up::after { content: ' ▲'; font-size: 9px; }
+    .data-box .data-row .val.down { color: #27ae60; }
+    .data-box .data-row .val.down::after { content: ' ▼'; font-size: 9px; }
+
+    /* ── 引言块 ── */
+    .pullquote {
+      border-left: 4px solid #1a1a1a;
+      padding: 8px 12px;
+      margin: 12px 0;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .pullquote .attribution {
+      font-size: 10px;
+      font-style: normal;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* ── 第二版：两栏 ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .two-col .col { border-right: 1px solid #999; }
+    .two-col .col:last-child { border-right: none; border-left: none; }
+
+    /* ── 第三版：四栏简讯 ── */
+    .four-col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .four-col .col {
+      border-right: 1px solid #bbb;
+      padding: 0 14px;
+    }
+
+    .four-col .col:first-child { padding-left: 0; }
+    .four-col .col:last-child { border-right: none; }
+
+    .brief-item {
+      padding: 8px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    .brief-item:last-child { border-bottom: none; }
+
+    .brief-title {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 3px;
+    }
+
+    .brief-text {
+      font-size: 11px;
+      color: #444;
+      line-height: 1.5;
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    /* ── AI专栏 ── */
+    .ai-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      margin: 10px 0;
+    }
+
+    .ai-table th {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 5px 8px;
+      text-align: left;
       font-weight: 500;
-      color: #1a1a1a;
       letter-spacing: 1px;
     }
 
-    /* ── 年份分隔 ── */
-    .year-divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 32px 0 16px;
-      font-size: 12px;
-      font-family: 'Noto Sans SC', sans-serif;
-      color: #888;
-      letter-spacing: 2px;
+    .ai-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
     }
 
-    .year-divider::before, .year-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #ccc;
+    .ai-table tr:nth-child(even) td { background: #f9f6f0; }
+
+    /* ── 广告/声明框 ── */
+    .notice-box {
+      border: 1px solid #999;
+      padding: 10px 14px;
+      margin: 12px 0;
+      text-align: center;
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #555;
+      line-height: 1.6;
     }
 
     /* ── 页脚 ── */
     .footer {
+      background: #1a1a1a;
+      color: #aaa;
       text-align: center;
-      padding: 20px;
+      padding: 14px;
       font-size: 10px;
       font-family: 'Noto Sans SC', sans-serif;
-      color: #aaa;
-      border-top: 1px solid #d4cec5;
-      margin-top: 40px;
+      letter-spacing: 2px;
+      margin-top: 30px;
+    }
+
+    /* ── 破图大字 ── */
+    .overline {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #c0392b;
+      font-family: 'Noto Sans SC', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .kicker {
+      font-size: 11px;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: 500;
+      color: #888;
       letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .drop-cap::first-letter {
+      float: left;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 0.85;
+      margin: 4px 6px 0 0;
+      color: #1a1a1a;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { max-width: 100%; padding: 10px; }
+    }
+
+    /* ── 返回目录导航 ── */
+    .back-nav {
+      background: #1a1a1a;
+      padding: 6px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .back-nav a {
+      color: #f5f0e8;
+      text-decoration: none;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+
+    .back-nav a:hover { opacity: 1; }
+
+    .back-nav .sep {
+      color: #666;
+      font-size: 11px;
     }
 
     @media (max-width: 768px) {
+      .back-nav { padding: 6px 14px; }
+      /* 报头 */
       .masthead { padding: 12px 16px 10px; }
       .masthead-top { flex-direction: column; align-items: center; gap: 4px; }
       .masthead-top .left, .masthead-top .right { width: auto; text-align: center; }
       .paper-name { font-size: 26px; letter-spacing: 2px; }
       .paper-subtitle { font-size: 11px; letter-spacing: 2px; }
-      .masthead-banner { margin: 12px -16px -12px; }
-      .page { padding: 20px 16px 40px; }
-      .issue-grid { grid-template-columns: 1fr; }
+
+      /* 主版面 */
+      .page { padding: 12px 14px; }
+
+      /* 三栏 → 单栏 */
+      .front-page { grid-template-columns: 1fr; }
+      .col { padding: 0; border: none !important; }
+      .col + .col { border-top: 1px solid #999 !important; padding-top: 16px; margin-top: 16px; }
+
+      /* 标题字号 */
+      .headline-main { font-size: 24px; }
+      .headline-sub { font-size: 16px; }
+
+      /* 二栏 → 单栏 */
+      .two-col { grid-template-columns: 1fr !important; }
+
+      /* 四栏数字格 → 二栏 */
+      .four-col { grid-template-columns: 1fr 1fr !important; }
+
+      /* 编辑总结（inline style 区域）→ 单栏 */
+      .editorial-grid { grid-template-columns: 1fr !important; }
+      .editorial-grid > div { border: none !important; padding: 0 !important; }
+      .editorial-grid > div + div { border-top: 1px solid #999 !important; padding-top: 16px !important; margin-top: 16px !important; }
+
+      /* 页脚 */
+      .footer { font-size: 9px; padding: 8px 14px; }
     }
 
     /* ── 二维码弹窗 ── */
@@ -322,6 +528,13 @@
 </script>
 
 
+<!-- ══════════ 返回目录 ══════════ -->
+<div class="back-nav">
+  <a href="./index.html">← 所有期刊</a>
+  <span class="sep">|</span>
+  <a href="./index.html">苹果酱日报 档案室</a>
+</div>
+
 <!-- ══════════ 报头 ══════════ -->
 <div class="masthead">
   <div class="masthead-top">
@@ -331,12 +544,12 @@
     </div>
     <div>
       <div class="paper-name">苹 果 酱 日 报</div>
-      <div class="paper-subtitle">APPLE JAM DAILY · 全球视野  理性思考</div>
+      <div class="paper-subtitle">APPLE JAM DAILY · FOUNDED 1980 · 全球视野  理性思考</div>
     </div>
     <div class="right">
-      档案室<br>
-      所有已发行期刊<br>
-      <strong>按日期倒序排列</strong><br>
+      2026年5月6日 星期三<br>
+      农历丙午年·四月初九<br>
+      <strong></strong><br>
       <a class="rss-btn" href="https://applejamm.github.io/newspaper/rss.xml">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="19" r="3"/><path d="M4 4a16 16 0 0 1 16 16h-3A13 13 0 0 0 4 7zm0 6a10 10 0 0 1 10 10H11A7 7 0 0 0 4 13z"/></svg>
         RSS 订阅
@@ -344,333 +557,359 @@
     </div>
   </div>
   <div class="masthead-banner">
-    每日更新 · AI辅助采编 · 滚动追踪最近30天 &nbsp;&nbsp;|&nbsp;&nbsp; 拒绝算法投喂，只读值得读的新闻 &nbsp;&nbsp;|&nbsp;&nbsp; 免费订阅，每日直达你的收件箱
+    每日更新 · AI辅助采编 · 滚动追踪最近30天   |   拒绝算法投喂，只读值得读的新闻   |   免费订阅，每日直达你的收件箱
+  </div>
   </div>
 </div>
 
-<!-- ══════════ 目录内容 ══════════ -->
+<!-- ══════════ 头版 ══════════ -->
 <div class="page">
 
-  <div class="archive-header">
-    <h1>期 刊 目 录</h1>
-    <span class="count">共 12 期 · 持续更新中</span>
-  </div>
+  <div class="front-page">
 
-  
-  
-    
-    
+    <!-- 左栏 -->
+    <div class="col">
+      <div class="section-label red">要闻速览</div>
       
-  <div class="year-divider">2026年</div>
-  <div class="issue-grid">
-    
+      <div class="headline-minor">特朗普暂停霍尔木兹海峡护航行动</div>
+      <div class="deck">特朗普政府周二宣布暂停霍尔木兹海峡护航行动，这一政策大转弯令市场意外。分析师指出，此举可能为美伊间接谈判创造空间，但伊朗方面尚未做出实质性让步承诺。</div>
+      <div class="source-credit"><a href="https://www.cnbc.com/2026/05/06/oil-prices-trump-pauses-strait-of-hormuz-escort-effort.html" target="_blank" rel="noopener">cnbc.com</a> · 5月6日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">泰国内阁批准120亿美元借款计划</div>
+      <div class="deck">泰国内阁周二批准120亿美元借款计划，专门用于应对伊朗战争可能带来的经济冲击。这是东南亚地区为应对地缘风险而采取的最大规模财政应对措施之一。</div>
+      <div class="source-credit"><a href="https://asia.nikkei.com/economy/thai-cabinet-approves-plans-to-borrow-12bn-to-ease-iran-war-fallout" target="_blank" rel="noopener">nikkei.com</a> · 5月6日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor"> Stocks Extend Record Rally, Oil Declines on Iran</div>
+      <div class="deck">全球股市延续涨势，标普500指数再创新高。投资者对美伊停火预期持续乐观，抵消了对能源供应中断的担忧。但能源分析师警告这种乐观可能为时过早。</div>
+      <div class="source-credit"><a href="https://www.bloomberg.com/news/articles/2026-05-05/asian-stocks-to-track-us-gains-on-truce-optimism-markets-wrap" target="_blank" rel="noopener">bloomberg.com</a> · 5月5日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">美联储新主席陷入两难境地</div>
+      <div class="deck">下一任美联储主席人选引发关注。在特朗普政府政策不确定性和通胀压力并存的背景下，新任美联储主席将面临前所未有的政策挑战。</div>
+      <div class="source-credit"><a href="https://www.economist.com/finance-and-economics/2026/04/12/americas-next-fed-chair-is-caught-in-a-vice" target="_blank" rel="noopener">economist.com</a> · 4月12日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">Kevin Warsh会否将美联储特朗普化？</div>
+      <div class="deck">前美联储理事Kevin Warsh被视为下任美联储主席热门人选。他的政策立场和对特朗普政府态度的转变，将深刻影响美国货币政策的走向。</div>
+      <div class="source-credit"><a href="https://www.economist.com/finance-and-economics/2026/04/26/will-kevin-warsh-trumpify-the-federal-reserve" target="_blank" rel="noopener">economist.com</a> · 4月26日</div>
+      <hr class="divider">
+      
+      <div class="data-box">
+        <div class="box-title">原油价格指数</div>
+        
+        <div class="data-row"><span>布伦特原油期货</span><span class="val down">跌破$110</span></div>
+        
+        <div class="data-row"><span>WTI美油</span><span class="val down">$105左右</span></div>
+        
+        <div class="data-row"><span>伊朗轻质油</span><span class="val up">供应受限</span></div>
+        
+        <div class="data-row"><span>天然气</span><span class="val neutral">波动加剧</span></div>
+        
+        <div class="data-row"><span>美国汽油均价</span><span class="val up">$4.8/加仑</span></div>
+        
+      </div>
+      <div class="notice-box">
+        「特朗普政府宣布暂停霍尔木兹海峡护航行动，油价应声下跌逾2%。但分析师警告，当前市场定价可能过于乐观，任何新的冲突事件都将导致油价立即反弹。」<br>—— CNBC / Bloomberg，2026年5月6日
+      </div>
+    </div>
 
-    <!-- 2026-05-06 -->
-    <a class="issue-card" href="./2026-05-06.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3043 期</span>
-          <span class="card-date">2026年5月6日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">特朗普暂停霍尔木兹护航<br>油价应声下跌 股市却创新高</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">特朗普政策180度转弯</div>
-        <div class="card-summary">特朗普暂停霍尔木兹护航引发油价下跌，股市创新高；OpenAI发布GPT-5.5减少AI幻觉，DeepMind员工投票组建工会抗议军事AI；美就业市场现回暖但风险犹存。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+    <!-- 中栏：头条 -->
+    <div class="col">
+      <div class="overline">特朗普政策180度转弯</div>
+      <div class="headline-main">特朗普暂停霍尔木兹护航<br>油价应声下跌 股市却创新高</div>
+      <div class="kicker">5月6日 · 美伊局势出现新变量</div>
 
-    
-  
-    
-    
+      <div class="photo-block" style="height:160px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <div class="photo-label">[ 战区示意图 ]</div>
+        <div class="photo-title">霍尔木兹海峡战略要道</div>
+        <div style="font-size:11px; opacity:0.6; margin-top:6px; font-family:'Noto Sans SC',sans-serif;">霍尔木兹海峡是全球石油运输咽喉要道，每日约有2000万桶原油通过。美国暂停护航行动后，国际油价应声下跌，但分析师警告这种乐观可能为时过早。</div>
+      </div>
 
-    <!-- 2026-05-05 -->
-    <a class="issue-card" href="./2026-05-05.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3043 期</span>
-          <span class="card-date">2026年5月5日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">伊朗袭击阿联酋<br>美国称在霍尔木兹海峡击沉伊朗船只</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">伊朗战争升级 · 海湾局势骤然紧张</div>
-        <div class="card-summary">伊朗首次导弹袭击阿联酋，美国在霍尔木兹海峡击沉伊朗船只回应，原油期货单日暴涨超5%突破120美元；MCP服务器被曝20万+漏洞引安全争议，中国AI周调用量再超美国；避险情绪升温美元走强，黄金高位震荡。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      
+      <p class="deck drop-cap">
+        特朗普政府周二宣布暂停霍尔木兹海峡护航行动，这一政策180度大转弯引发市场剧烈反应。消息公布后，国际油价应声下跌逾2%，布伦特原油跌破110美元/桶关口。但这一政策转向的可持续性存疑——伊朗方面尚未做出实质性让步，地缘紧张局势随时可能卷土重来。
+      </p>
+      
+      <p class="deck">
+        全球股市却无视地缘风险继续高歌猛进。标普500指数再创新高，纳斯达克综合指数同步上涨，市场对美伊达成某种停火协议的预期持续升温。然而华尔街资深策略师警告：「当前的市场定价过于乐观，如果霍尔木兹海峡再次发生任何冲突事件，油价将立即反弹。」
+      </p>
+      
+      <p class="deck">
+        泰国政府周二批准120亿美元借款计划，专门用于应对伊朗战争可能带来的经济冲击。这反映出东南亚主要经济体对地缘风险的高度警惕。与此同时，印度时隔7年后重新从伊朗进口石油和天然气的计划也在推进中，显示美国制裁的全球约束力正在减弱。
+      </p>
+      
 
-    
-  
-    
-    
+      <div class="pullquote">
+        "当前的市场定价过于乐观，如果霍尔木兹海峡再次发生任何冲突事件，油价将立即反弹。"
+        <div class="attribution">—— 华尔街资深策略师，2026年5月6日</div>
+      </div>
 
-    <!-- 2026-05-04 -->
-    <a class="issue-card" href="./2026-05-04.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3043 期</span>
-          <span class="card-date">2026年5月4日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">特朗普拒绝伊朗和平方案<br>北京下令中国企业无视美国制裁</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">美伊谈判破裂 战争成本外溢</div>
-        <div class="card-summary">地缘：特朗普暗示拒绝伊朗和平方案，北京明确指示企业无视美国对伊制裁，中美伊朗问题博弈急剧升级。科技：AI中间层LlamaIndex揭示行业洗牌，20万MCP服务器暴露安全漏洞，xAI发布低价Grok 4.3。经济：OPEC+象征性增产难缓油价，美联储古尔斯比称通胀数据为「坏消息」，利率政策陷入两难。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      <div class="byline">本报国际组 · 华盛顿/新加坡/曼谷 综合报道</div>
+    </div>
 
-    
-  
-    
-    
+    <!-- 右栏 -->
+    <div class="col">
+      <div class="section-label blue">科技前沿</div>
 
-    <!-- 2026-04-07 -->
-    <a class="issue-card" href="./2026-04-07.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3042 期</span>
-          <span class="card-date">2026年4月7日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">伊朗提出十点停战方案<br>高盛警告铜价面临战争冲击</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">美伊谈判僵局 债市通胀衰退两难</div>
-        <div class="card-summary">伊朗提出十点停战方案要求美国停止打击并解除制裁，但外交专家直言双方距协议仍远。高盛警告伊朗战争令铜价面临崩塌风险。美国汽油价格逼近5美元/加仑，印度时隔7年重启伊朗石油进口。北朝鲜劫持热门开源项目，AI智能体时代到来混乱相随。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      <div class="headline-sub">ChatGPT新模型 hallucination 大幅减少</div>
+      <div class="deck">OpenAI周二发布GPT-5.5 Instant，声称新版默认模型的幻觉率大幅降低。这是该公司提升AI可靠性的重大更新，但专家提醒完全消除AI幻觉仍是技术难题。</div>
 
-    
-  
-    
-    
+      <table class="ai-table">
+        <tr><th>模型</th><th>发布方</th><th>亮点</th></tr>
+        
+        <tr>
+          <td><strong>GPT-5.5 Instant</strong></td>
+          <td>OpenAI</td>
+          <td>新版默认模型 hallucination 大幅减少</td>
+        </tr>
+        
+        <tr>
+          <td><strong>Claude AI Agent</strong></td>
+          <td>Anthropic</td>
+          <td>向谷歌云和芯片投入2000亿美元加深绑定</td>
+        </tr>
+        
+        <tr>
+          <td><strong>DeepMind AI</strong></td>
+          <td>Google</td>
+          <td>员工投票赞成组建工会 反对军事AI交易</td>
+        </tr>
+        
+        <tr>
+          <td><strong>AI芯片</strong></td>
+          <td>NVIDIA</td>
+          <td>黄仁勋：中国不应获得最先进芯片</td>
+        </tr>
+        
+      </table>
 
-    <!-- 2026-04-06 -->
-    <a class="issue-card" href="./2026-04-06.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3041 期</span>
-          <span class="card-date">2026年4月6日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">伊朗击落美军F-15E战斗机<br>特朗普发出「48小时」最后通牒</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">中东冲突急剧升级</div>
-        <div class="card-summary">伊朗击落美军F-15E战斗机，特朗普发出48小时最后通牒，中东冲突急剧升级。微软同日发布3款AI模型直击OpenAI。美国就业数据强劲削弱降息预期，油价维持在110美元以上高位。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+      <hr class="divider">
 
-    
-  
-    
-    
+      
+      <div class="headline-minor">OpenAI发布GPT-5.5 Instant 减少AI幻觉</div>
+      <div class="deck">OpenAI周二发布新版ChatGPT默认模型GPT-5.5 Instant，声称新模型的幻觉率大幅降低。这是该公司为提升AI可靠性而推出的重大更新，但完全消除AI幻觉仍是行业性技术难题。</div>
+      <div class="source-credit"><a href="https://www.theverge.com/ai-artificial-intelligence/924225/openai-chatgpt-default-model-gpt-5-5-instant" target="_blank" rel="noopener">theverge.com</a> · 5月5日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">谷歌DeepMind员工投票组建工会</div>
+      <div class="deck">谷歌DeepMind员工投票赞成组建工会，以抗议公司军事AI项目。这是大型科技公司AI研究部门首次出现的工会化运动，反映出科技行业内部对军事AI应用日益增长的分歧。</div>
+      <div class="source-credit"><a href="https://www.wired.com/story/google-deepmind-workers-vote-to-unionize-over-military-ai-deals/" target="_blank" rel="noopener">wired.com</a> · 5月5日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">黄仁勋：美国应保持AI领先地位</div>
+      <div class="deck">英伟达CEO黄仁勋在采访中明确表示，中国不应获得英伟达的最先进芯片，美国应当保持在AI领域的领先地位。他强调这是国家安全考量，而非商业决策。</div>
+      <div class="source-credit"><a href="https://view.inews.qq.com/a/20260505A064G600" target="_blank" rel="noopener">Tencent News</a> · 5月5日</div>
+      <hr class="divider">
+      
+      <div class="headline-minor">Anthropic向谷歌投入2000亿美元</div>
+      <div class="deck">Anthropic宣布将向谷歌的云服务和芯片基础设施投入2000亿美元，这是AI初创公司与大型云服务商之间最大规模的深度绑定合作之一。</div>
+      <div class="source-credit"><a href="https://wallstreetcn.com/articles/3771613" target="_blank" rel="noopener">Wall Street CN</a> · 5月6日</div>
+      <hr class="divider">
+      
 
-    <!-- 2026-04-05 -->
-    <a class="issue-card" href="./2026-04-05.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3040 期</span>
-          <span class="card-date">2026年4月5日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">科威特石油总部遭无人机袭击起火<br>霍尔木兹海峡首次有船只通过</div>
+      <div class="data-box" style="margin-top:12px;">
+        <div class="box-title">科技资本动向</div>
+        
+        <div class="data-row"><span>Anthropic-谷歌合作投入</span><span class="val up">2000亿美元</span></div>
+        
+        <div class="data-row"><span>DeepMind工会投票</span><span class="val neutral">赞成组建工会</span></div>
+        
+        <div class="data-row"><span>NVIDIA对华芯片政策</span><span class="val up">维持限制</span></div>
+        
       </div>
-      <div class="card-body">
-        <div class="card-overline">中东冲突急剧升级</div>
-        <div class="card-summary">科威特石油公司总部遭伊朗无人机袭击起火；特朗普警告伊朗「48小时窗口期」；法日船只首次通过霍尔木兹海峡；微软发布3款AI模型直击OpenAI；美国3月就业数据强劲削弱降息预期。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+    </div>
+  </div>
 
-    
-  
-    
-    
+  <hr class="divider-thick">
 
-    <!-- 2026-04-04 -->
-    <a class="issue-card special" href="./2026-04-04.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3036 期</span>
-          <span class="card-date">2026年4月4日</span>
-        </div>
-        <div class="card-tag special">伊朗战争升级特别报道</div>
-        <div class="card-headline">美军F-15E被伊朗击落 霍尔木兹海峡局势骤然紧张</div>
+  <!-- ══════════ 第二版：经济 + 地区冲突 ══════════ -->
+  <div class="two-col">
+    <div class="col">
+      <div class="section-label gold">经济·能源</div>
+      <div class="headline-sub"></div>
+      
+      <div class="byline"></div>
+      <div class="data-box">
+        <div class="box-title">全球航运压力指数</div>
+        
+        <div class="data-row"><span>霍尔木兹海峡</span><span class="val down">美国暂停护航</span></div>
+        
+        <div class="data-row"><span>苏伊士运河</span><span class="val neutral">正常通行</span></div>
+        
+        <div class="data-row"><span>波斯湾保险</span><span class="val down">风险溢价下降</span></div>
+        
+        <div class="data-row"><span>全球航运指数</span><span class="val neutral">平稳</span></div>
+        
       </div>
-      <div class="card-body">
-        <div class="card-overline">伊朗战争进入危险新阶段</div>
-        <div class="card-summary">美军F-15E战斗轰炸机在伊朗边境被击落，这是战争爆发以来美军最重大损失；微软一次发布3款AI模型直接挑战OpenAI；布伦特原油突破110美元，对冲基金一月亏损超千亿美元。</div>
+      <div class="pullquote">
+        
+        <div class="attribution"></div>
       </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+    </div>
 
-    
-  
-    
-    
+    <div class="col">
+      <div class="section-label red">地区冲突</div>
+      <div class="headline-sub">霍尔木兹再燃战火 期货市场预测布伦特年底破90美元</div>
+      <div class="deck">尽管特朗普暂停护航行动短暂缓解市场紧张情绪，但期货市场依然看涨油价。分析师预测布伦特原油年底将突破90美元/桶，地缘风险溢价仍是能源市场主旋律。</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">特朗普暂停霍尔木兹护航 油价应声下跌</div>
+      <div class="deck">特朗普政府宣布暂停霍尔木兹海峡护航行动后，国际油价应声下跌逾2%。这是自伊朗冲突升级以来油价首次出现明显回调，但分析师警告这种跌势可能是暂时的。</div>
+      <div class="source-credit"><a href="https://www.cnbc.com/2026/05/06/oil-prices-trump-pauses-strait-of-hormuz-escort-effort.html" target="_blank" rel="noopener">cnbc.com</a> · 5月6日</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">期货市场预测布伦特年底破90美元</div>
+      <div class="deck">尽管短期油价下跌，但期货市场依然看涨长期走势。分析师预测布伦特原油年底将突破90美元/桶，反映出市场对地缘风险持续存在的担忧。</div>
+      <div class="source-credit"><a href="https://view.inews.qq.com/a/20260505A04QL300" target="_blank" rel="noopener">Tencent News</a> · 5月5日</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">泰国内阁批准120亿美元应对伊朗战争</div>
+      <div class="deck">泰国内阁批准120亿美元借款计划，专门用于应对伊朗战争可能带来的经济冲击。这是东南亚地区为应对地缘风险采取的最大规模财政措施。</div>
+      <div class="source-credit"><a href="https://asia.nikkei.com/economy/thai-cabinet-approves-plans-to-borrow-12bn-to-ease-iran-war-fallout" target="_blank" rel="noopener">nikkei.com</a> · 5月6日</div>
+      
+      <hr class="divider">
+      <div class="headline-minor">全球能源市场处于灾难边缘</div>
+      <div class="deck">经济学人分析指出，全球能源市场正处于灾难边缘。伊朗冲突持续时间越长，全球供应链受到的影响就越严重，能源价格波动将传导至经济的各个层面。</div>
+      <div class="source-credit"><a href="https://www.economist.com/finance-and-economics/2026/04/21/global-energy-markets-are-on-the-verge-of-a-disaster" target="_blank" rel="noopener">economist.com</a> · 4月21日</div>
+      
+    </div>
+  </div>
 
-    <!-- 2026-04-03 -->
-    <a class="issue-card" href="./2026-04-03.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3034 期</span>
-          <span class="card-date">2026年4月3日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">布伦特原油现货飙升至140美元<br>美银警告：百元油价可能贯穿全年</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">油价突破百元大关</div>
-        <div class="card-summary">布伦特原油现货突破140美元，为2008年以来首次，伊朗战争持续推高霍尔木兹海峡风险溢价；对冲基金一月亏损超千亿美元，美银警告百元油价贯穿全年或使美联储降息预期落空；微软宣布未来四年在日本投资100亿美元，一口气发布三个基础模型，AI竞争白热化。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
+  <hr class="divider-thick">
 
+  <!-- ══════════ 第三版：简讯四栏 ══════════ -->
+  <div style="margin-bottom:8px;">
+    <span class="section-label">国际简讯</span>
+  </div>
+  <div class="four-col">
     
-  
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">山姆回应多名顾客拿袋子装免费酱料</div>
+        <div class="brief-text">山姆会员店回应顾客拿袋子装免费酱料事件，引发网络热议。消费者对商家政策的讨论热度持续上升。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">桃花坞6定档</div>
+        <div class="brief-text">热门综艺节目桃花坞6正式定档，引发粉丝关注和讨论。</div>
+      </div>
+      
+    </div>
     
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">以旧换新加力扩围掀起消费新热潮</div>
+        <div class="brief-text">以旧换新政策加力扩围，激发消费新热潮。政策推动下，家电、汽车等大宗消费呈现回暖态势。</div>
+      </div>
+      
+      <div class="brief-item">
+        <div class="brief-title">金建希案二审法官死在法院内</div>
+        <div class="brief-text">韩国金建希案二审出现意外事件，法官死在法院内，引发广泛关注。</div>
+      </div>
+      
+    </div>
     
-
-    <!-- 2026-04-02 -->
-    <a class="issue-card" href="./2026-04-02.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3033 期</span>
-          <span class="card-date">2026年4月2日</span>
-        </div>
-        <div class="card-tag regular">地缘聚焦版 · 每日快报</div>
-        <div class="card-headline">伊朗总统请求停火<br>特朗普开价霍尔木兹海峡</div>
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">OpenAI发布GPT-5.5减少AI幻觉</div>
+        <div class="brief-text">OpenAI发布新版ChatGPT默认模型GPT-5.5 Instant，声称新模型的幻觉率大幅降低。这是AI可靠性的重要突破。</div>
       </div>
-      <div class="card-body">
-        <div class="card-overline">美伊停战出现突破信号</div>
-        <div class="card-summary">布伦特原油跌超2%至98美元，纳指涨超1%，黄金日内涨幅2%。以色列继续对黎巴嫩施压，IEA警告原油供应缺口恶化。Meta代码审查准确率达93%，Slack宣布史上最大AI更新。</div>
+      
+      <div class="brief-item">
+        <div class="brief-title">DeepMind员工投票组建工会</div>
+        <div class="brief-text">谷歌DeepMind员工投票赞成组建工会，以抗议公司参与军事AI项目。这是大型科技公司AI研究部门的首次工会化尝试。</div>
       </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
-
+      
+    </div>
     
-  
-    
-    
-
-    <!-- 2026-04-01 -->
-    <a class="issue-card special" href="./2026-04-01.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3031 期</span>
-          <span class="card-date">2026年4月1日</span>
-        </div>
-        <div class="card-tag special">停战信号 · 市场急涨特别报道</div>
-        <div class="card-headline">布油跌破$100 黄金升破$4700<br>特朗普称两三周内结束战事<br>全球股债齐涨</div>
+    <div class="col">
+      
+      <div class="brief-item">
+        <div class="brief-title">美联储终止对法国农业信贷银行等机构的执法行动</div>
+        <div class="brief-text">美联储宣布终止对法国农业信贷银行及其投资银行子公司、兆丰国际商业银行和高盛集团的执法行动。</div>
       </div>
-      <div class="card-body">
-        <div class="card-overline">4月6日截止期前夜 · 美伊同步释放信号</div>
-        <div class="card-summary">伊朗称海峡会开放但不对美国，以色列当日仍宣布打击计划。OpenAI完成融资估值$852B，韩国半导体出口同比+151%。</div>
+      
+      <div class="brief-item">
+        <div class="brief-title">日本寻求参与安哥拉石油和矿产</div>
+        <div class="brief-text">日本在非洲访问期间寻求加强与安哥拉在石油和矿产资源领域的合作，显示其在非洲能源布局的战略意图。</div>
       </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
-
-    
-  
-    
-    
-
-    <!-- 2026-03-31 -->
-    <a class="issue-card special" href="./2026-03-31.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3030 期</span>
-          <span class="card-date">2026年3月31日</span>
-        </div>
-        <div class="card-tag special">战争第31天 · 特别报道</div>
-        <div class="card-headline">伊朗拒绝15点和谈方案<br>焚毁科威特油轮<br>美军大规模增兵逼近</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">4月6日截止期迫近 · 距今仅剩6天</div>
-        <div class="card-summary">外交陷入僵局，特朗普称「不在乎是否达成协议」。亚马逊$500亿押注OpenAI，黄金遭遇2008年来最差单月表现。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
-
-    
-  
-    
-    
-
-    <!-- 2026-03 -->
-    <a class="issue-card" href="./2026-03.html">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="card-issue-no">总第 3029 期</span>
-          <span class="card-date">2026年3月</span>
-        </div>
-        <div class="card-tag regular">2026年3月号</div>
-        <div class="card-headline">美以联合空袭伊朗<br>哈梅内伊身亡<br>霍尔木兹封锁</div>
-      </div>
-      <div class="card-body">
-        <div class="card-overline">战争爆发 · 中东巨变</div>
-        <div class="card-summary">霍尔木兹海峡封锁，油价飙升至$120。OpenClaw发布引发AI商品化讨论，中国两会落幕，欧洲防务重整。</div>
-      </div>
-      <div class="card-footer">
-        <span>地缘·科技·经济</span>
-        <span class="read-link">阅读全文 →</span>
-      </div>
-    </a>
-
+      
+    </div>
     
   </div>
-    
-  
+
+  <hr class="divider-thick">
+
+  <!-- ══════════ 编辑总结 ══════════ -->
+  <div class="editorial-grid" style="display:grid; grid-template-columns: 2fr 1fr; gap:0;">
+    <div style="padding-right:24px; border-right:1px solid #999;">
+      <span class="section-label green">本月总评</span>
+      <div class="headline-sub" style="margin-top:8px;">特朗普的霍尔木兹算盘：和平曙光还是战术投机？</div>
+      
+      <p class="deck drop-cap">特朗普政府宣布暂停霍尔木兹海峡护航行动，这一决定在国际舞台上投下了震撼弹。支持者欢呼这是避免战争的理性选择，批评者则质疑这是否又是另一场精心策划的战术投机。</p>
+      
+      <p class="deck">从表面上看，暂停护航似乎是一种善意姿态——美国不再武装巡逻这条全球石油咽喉要道，理论上降低了擦枪走火的风险。伊朗方面对此表示欢迎，国际油价也应声下跌。股市继续创新高，投资者似乎在用真金白银为和平预期投票。</p>
+      
+      <p class="deck">但仔细审视这一政策转向的细节，令人不安的细节浮出水面。美国没有做出任何具有约束力的承诺，只是单方面暂停了一项军事行动。伊朗的导弹能力和核计划并未受到任何限制。更关键的是，伊朗方面从未承诺停止对通过霍尔木兹海峡的船只实施任何形式的干扰。</p>
+      
+      <p class="deck">经济学人此前的警告言犹在耳：全球能源市场正处于灾难边缘。这不是危言耸听，而是基于对供应链脆弱性的冷静评估。霍尔木兹海峡每日承载着全球约20%的石油供应，任何长期中断都将导致油价飙升至不可想象的高度。</p>
+      
+      <p class="deck">泰国政府周二宣布的120亿美元借款计划，恰恰反映了这场地缘博弈的深层逻辑。东南亚最大经济体之一正在为最坏情况做准备——不是准备战争，而是准备承受战争带来的经济冲击。这种未雨绸缪的务实态度，与华尔街的盲目乐观形成了鲜明对比。</p>
+      
+      <p class="deck">更深层的问题在于，特朗普政府的政策转向能否持续。如果这只是为了在某个特定时刻营造谈判氛围的战术手段，那么一旦目的达成，政策可能随时回撤。这种不确定性本身就是一种风险——它让各方更难做出长期承诺，也让地区局势更加难以预测。</p>
+      
+      <p class="deck">市场当前的乐观情绪建立在一个脆弱的前提之上：美伊将达成某种形式的协议。但如果历史有任何启示的话，那就是在地缘政治的博弈中，期望往往与结果相去甚远。投资者应当记住：在霍尔木兹海峡这个全球能源心脏，任何微小的火花都可能引发轩然大波。</p>
+      
+      <div class="byline"></div>
+    </div>
+
+    <div style="padding-left:24px;">
+      <span class="section-label">本月关键数字</span>
+      <div class="data-box" style="margin-top:10px; border:none; padding:0;">
+        
+        <div class="data-row"><span>布伦特原油</span><span class="val down">跌破$110</span></div>
+        
+        <div class="data-row"><span>标普500</span><span class="val up">再创新高</span></div>
+        
+        <div class="data-row"><span>泰国借款计划</span><span class="val up">$120亿</span></div>
+        
+        <div class="data-row"><span>Anthropic-谷歌合作</span><span class="val up">$2000亿</span></div>
+        
+        <div class="data-row"><span>美就业增长</span><span class="val up">超预期</span></div>
+        
+        <div class="data-row"><span>黄金走势</span><span class="val neutral">方向不明</span></div>
+        
+        <div class="data-row"><span>霍尔木兹护航</span><span class="val down">暂停</span></div>
+        
+        <div class="data-row"><span>地缘风险溢价</span><span class="val up">仍处高位</span></div>
+        
+      </div>
+      <div class="notice-box" style="margin-top:16px; border:2px solid #1a1a1a;">
+        <strong>下期预告</strong><br><br>
+        
+        美伊间接谈判进展<br>
+        
+        伊朗核计划最新动向<br>
+        
+        美联储政策信号<br>
+        
+        AI监管立法进程<br>
+        
+      </div>
+    </div>
+  </div>
 
 </div>
+
 
 <!-- ══════════ 页脚 ══════════ -->
 <div class="footer">
-  苹果酱日报 APPLE JAM DAILY · FOUNDED 1980 · 全球视野 理性思考<br>
-  AI辅助采编 · 免费订阅 · 每日发行
+  苹果酱日报 APPLE JAM DAILY &nbsp;·&nbsp; 2026年5月6日 &nbsp;·&nbsp; 地缘聚焦版 · 每日快报第3043期 &nbsp;·&nbsp; 数据来源：Wikipedia / CNBC / Al Jazeera / WEF / S&P Global / BuildFastWithAI &nbsp;·&nbsp; AI 辅助编辑整理
 </div>
 
 </body>
